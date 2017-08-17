@@ -1,0 +1,31 @@
+<ion-view view-title="我的课程详情">
+ <ion-header-bar align-title="center" style="background:#F08080;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">我的课程详情</h1>
+ </ion-header-bar>
+  <ion-content id="my-detail">
+     <ion-refresher pulling-icon="ion-load-a" spinner="bubbles" on-refresh="refresh()"  refreshing-text="加载完成..."></ion-refresher>
+  	<div>
+      <div><img src="img/tabs/myGirl.png" style="width:100%"></div>
+      <div class="detail-avatar">
+          <img ng-src="{{deta.avatar}}" class="tou-avatar">
+          <div class="name" ng-bind="deta.studentName">李晓杰</div>
+      </div>
+    </div>
+    <!-- 课程信息 -->
+    <div class="subject-info">
+        <ul>
+          <li class="info-li">
+            <span class="subject-span">课程:</span>&nbsp;<span ng-bind="deta.cateName">英语</span>
+          </li>
+          <li class="info-li">
+            <span class="subject-span1">日期:</span>&nbsp;<span ng-bind="deta.day">2017年4月14日</span>
+          </li>
+          <li class="info-li">
+            <span class="subject-span2">时间:</span>&nbsp;<span ng-bind="deta.week">周四</span> <span ng-bind="deta.time">8:30-10:30</span>
+          </li>
+        </ul>
+    </div>
+    <time-picker  time-picker-result="toolModel.timePickerResult"  title="请选择开始时间和结束时间"></time-picker> 
+  </ion-content>
+</ion-view>

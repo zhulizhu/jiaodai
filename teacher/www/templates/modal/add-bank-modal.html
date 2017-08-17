@@ -1,0 +1,13 @@
+<ion-modal-view id="add-bank-modal">
+<div class="box">
+<p>添加银行卡</p>
+<div class="bank"><span>银行：</span><select style="width: 80%" ng-model="selected.name" ng-options="x.name for x in choices"></select></div>
+<div class="num"><span>卡号：</span><input style="width: 80%;display: inline;" type="text" maxlength="19" minlength="15"  name="" ng-model="num.numbe"></div>
+<div class="bt">
+  <button class="btn1" ng-click="closeModal()">取消</button><button class="btn2" ng-click="addBank({bank:selected,number:num.numbe})">确定</button>
+</div>
+
+  
+</div>
+
+</ion-modal-view>

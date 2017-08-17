@@ -1,0 +1,112 @@
+<ion-view view-title="报告及解决方案">
+    <ion-header-bar align-title="center" style="background:#eb6761;">
+        <yike-back style="color:#fff;"></yike-back>
+        <h1 class="title" style="color:#fff;">上次诊断报告</h1>
+    </ion-header-bar>
+    <ion-content id="problem">
+        <!-- 学习能力报告 -->
+        <div class="report">
+            <span style="width: 100%;border-bottom:2px solid #857d7d;float: left;margin:0 10px;font-size:18px;display: block;padding: 10px 0;font-weight: bold;">学习能力报告</span>
+            <!--<img src="img/teacher/report-solution.png" style="float:right;width:5%;margin:20px;display: inline-block;" ng-click="reloadRoute()">-->
+            <div id="main" style="margin:0 10px;border-bottom:2px solid #857d7d;">
+                <div class="row" ng-repeat="list in Pics" style="padding: 5px 0px;">
+                    <div class="col col-20" ng-bind="list.name">作业</div>
+                    <div class="col col-10">
+                        <img ng-src="img/account/pin1.png" ng-show="list.grade > 1">
+                        <img ng-src="img/account/pin2.png" ng-show="list.grade ==1 ">
+                        <img ng-src="img/account/pin3.png" ng-show="list.grade <1">
+                    </div>
+                    <div class="col col-10">
+                        <img ng-src="img/account/pin1.png" ng-show="list.grade > 3">
+                        <img ng-src="img/account/pin2.png" ng-show="list.grade ==3 ">
+                        <img ng-src="img/account/pin3.png" ng-show="list.grade <3">
+                    </div>
+                    <div class="col col-10">
+                        <img ng-src="img/account/pin1.png" ng-show="list.grade > 5">
+                        <img ng-src="img/account/pin2.png" ng-show="list.grade ==5 ">
+                        <img ng-src="img/account/pin3.png" ng-show="list.grade <5">
+                    </div>
+                    <div class="col col-10">
+                        <img ng-src="img/account/pin1.png" ng-show="list.grade > 7">
+                        <img ng-src="img/account/pin2.png" ng-show="list.grade ==7 ">
+                        <img ng-src="img/account/pin3.png" ng-show="list.grade <7">
+                    </div>
+                    <div class="col col-10">
+                        <img ng-src="img/account/pin1.png" ng-show="list.grade > 9">
+                        <img ng-src="img/account/pin2.png" ng-show="list.grade ==9 ">
+                        <img ng-src="img/account/pin3.png" ng-show="list.grade <9">
+                    </div>
+                </div>
+            </div>
+            <div style="padding:10px 10px 30px 10px">
+                <span style="color:#eb6761;font-size:18px">综合评分&nbsp;:&nbsp;<span ng-bind="evaluates.all_score"></span></span>
+                <div style="padding-top:10px;color:#666" ng-bind="evaluates.all_content">
+                </div>
+            </div>
+        </div>
+        <!-- 学科报告 -->
+        <div style="position:relative; height:30px;border-top:10px solid #f0eff4;">
+            <span style="display: block;font-weight: bold;margin:10px;font-size:18px">学科报告</span>
+        </div>
+        <div class="row subject" style="padding:10px 0;margin:10px;border-bottom: 2px solid #857d7d;">
+            <span class="col-20" ng-repeat="clas in evaluates.sub"   ng-bind="clas" ></span>
+        </div>
+        <!-- 理解能力 -->
+        <div style="padding:0px 10px" ng-hide="evaluates.first_problem==null">
+            <div style="overflow:hidden;margin-top:20px;padding:10px;background-color: #eb6761;border-radius: 5px;">
+                <span class="think" ng-bind="evaluates.first_problem">理解能力</span>
+                <span style="display: block;float: right;color:#fff;font-size:16px">评分&nbsp;:&nbsp;<span ng-bind="evaluates.first_ability"></span></span>
+            </div>
+        </div>
+        <div style="padding:0 10px 30px 10px;" ng-hide="evaluates.first_content==null">
+            <div style="border-radius:5px;padding:10px;color:#666;border:1px solid #857d7d" ng-bind="evaluates.first_content">
+            </div>
+        </div>
+        <!-- 沟通能力 -->
+        <div style="padding:0px 10px" ng-hide="evaluates.second_problem==null">
+            <div style="overflow:hidden;margin-top:20px;padding:10px;background-color: #eb6761;border-radius: 5px;">
+                <span class="power" ng-bind="evaluates.second_problem"></span>
+                <span style="display: block;float: right;color:#fff;font-size:16px">评分&nbsp;:&nbsp;<span ng-bind="evaluates.second_ability"></span></span>
+
+            </div>
+        </div>
+        <div style="padding:0px 10px 30px 10px;" ng-hide="evaluates.second_content==null">
+            <div style="border-radius:5px;padding:10px;color:#666;border:1px solid #857d7d" ng-bind="evaluates.second_content">
+            </div>
+        </div>
+        <div style="    border-top: 10px solid #f0eff4;">
+            <span style="display: block;font-weight:bold;margin:10px;font-size:18px">家教方案</span>
+        </div>
+        <!-- 专业课程 -->
+        <div style="padding:10px">
+            <div>
+                <!--<span class="zy">专业课程</span>-->
+                <div class="home-content">
+
+                    <span style="margin-right:6px;border-radius: 4px;padding:1px 10px;" ng-repeat="clas in evaluates.sub"   ng-bind="clas"></span>
+                </div>
+            </div>
+        </div>
+        <div style="padding:10px 10px 30px 10px;" ng-hide="evaluates.first_problem==null">
+            <div style="padding:10px;overflow: hidden;background-color: #eb6761;border-radius: 5px;">
+                <span style="font-size:16px;color:#fff;display: block;float: left" ng-bind="evaluates.first_problem"></span><span style="float:right;color: #fff;display: block"><i  ng-bind="evaluates.first"></i>位教师拥有此技能</span>
+
+            </div>
+            <div style="border-radius:5px;padding:10px;color:#666;border:1px solid #857d7d" ng-bind="evaluates.tutor_ability1">
+            </div>
+        </div>
+        <div style="padding:10px 10px 30px 10px;" ng-hide="evaluates.second_problem==null">
+            <div style="padding:10px;overflow: hidden;background-color: #eb6761;border-radius: 5px;">
+                <span style="font-size:16px;color:#fff;display: block;float: left" ng-bind="evaluates.second_problem"></span><span style="float:right;color: #fff;display: block"><i  ng-bind="evaluates.second"></i>位教师拥有此技能</span>
+
+
+            </div>
+            <div style="border-radius:5px;padding:10px;color:#666;border:1px solid #857d7d" ng-bind="evaluates.tutor_ability2">
+            </div>
+        </div>
+        <!-- 去选择我的家教 -->
+        <div>
+            <button class="myteacher" ng-click="goBack()" >去选择我的家教</button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="手机验证登录">
+  <ion-header-bar align-title="center" style="background:#44A8FA;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">手机验证登录</h1>
+ </ion-header-bar>
+  <ion-content id="phone-login">
+      <div class="enters">
+        <div class="enters-top">
+          <input type="tel" placeholder="请输入手机号" ng-model="formValue.tel" maxlength="11">
+        </div>
+        <div class="enter">
+          <input type="password" placeholder="请输入验证码" ng-model="formValue.password" maxlength="16">
+           <span class="code">获取验证码</span>
+        </div>
+      </div>
+      <button class="phone-login">登录</button>
+  </ion-content>
+</ion-view>

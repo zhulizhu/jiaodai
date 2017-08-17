@@ -1,0 +1,33 @@
+<ion-view view-title="我的课程">
+ <ion-header-bar align-title="center" style="background:#F08080;">
+  <h1 class="title" style="color:#fff;">我的课程</h1>
+ </ion-header-bar>
+  <ion-content id="teacher-subject">
+  	<div style="padding:10px">
+  		<!-- 我的课程标签 -->
+  		<div class="subject" style="overflow: hidden;margin-top: 0px;">
+
+  				<span  style="float:left;color: #F08080;display: block;margin: 10px;font-size: 18px;">我的课程</span>
+
+  			<span class="history" ui-sref="history">历史课程</span>
+  		</div>
+  	</div>
+  	<!-- 我的课程列表 -->
+  	<div class="list biao" ng-repeat="item in class">
+  		<div class="item item-thumbnail-left">
+      		<img ng-src="{{item.avatar}}">
+      		<h2><span ng-bind="item.studentName">李晓杰  </span><span class="english">(<span ng-bind="item.cateName">英语</span>)</span></h2>
+      		<div style="margin-top:4px">
+      			<span class="date">日期: <span ng-bind="item.day" style="margin-right: 5px;"></span><span ng-bind="item.week">星期五</span></span>
+      		</div>
+      		<div style="margin-top:4px">
+      			<span class="classtime">上课时间: <span ng-bind="item.time"></span>
+      		</div>
+    	</div>
+    	<div class="detail">
+    		<div style="font-size:14px;color:#F08080;padding-top:12px" ui-sref="my-detail({id:item.cid})">查看详情</div>
+    	</div>
+  	</div>
+	  <p ng-show="stat==0" style="text-align: center;margin: 60px 0;">没有我的课程！</p>
+  </ion-content>
+</ion-view>

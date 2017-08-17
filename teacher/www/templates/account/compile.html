@@ -1,0 +1,29 @@
+<ion-view view-title="我的资料">
+ <ion-header-bar align-title="center" style="background:#F08080;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">修改资料</h1>
+ </ion-header-bar>
+  <ion-content id="my-profile">
+  	<div class="div">
+        <span style="color: #F08080;display: block;margin: 10px;font-size: 18px;">修改资料</span>
+  	</div>
+  	<div class="my-avatar">
+  		<img ng-src="{{details.avatar}}" class="children">
+  	</div>
+    <div class="chang">
+       <!--<div class="x1">姓名：<input type="text"  name="" ng-model="profile.name" ></div>-->
+       <div class="x2">电话：<input type="number" name="" ng-model="profile.phone" ng-minlength="11" ng-maxlength="11"></div>
+       <div class="x3">地址：<input type="text" name="" ng-model="profile.address"></div>
+       <div class="x4">就读院校：<input type="text" name="" ng-model="profile.school"></div>
+       <div class="x4">个性签名：<input type="text" name="" ng-model="profile.autograph"></div>
+       <div class="x4 x5">&nbsp;&nbsp;&nbsp;&nbsp;课时费：
+       <select ng-model="profile.cost" ng-options="x.id as x.class for x in costs"></select>
+        元
+       </div>
+       <div class="x4 x5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别：
+          <select ng-model="profile.sex" ng-options="x.id as x.val for x in sexs"></select>
+       </div>
+       <button ng-click="changZl()">提交</button>
+    </div>
+  </ion-content>
+</ion-view>

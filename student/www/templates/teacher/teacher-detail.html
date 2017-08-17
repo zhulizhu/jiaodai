@@ -1,0 +1,110 @@
+<ion-view view-title="教师列表">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+    <yike-back style="color:#fff;"></yike-back>
+    <h1 class="title" style="color:#fff;">教师详情</h1>
+  </ion-header-bar>
+  <ion-content id="teacher-detail">
+    <!-- 详情封面头像 -->
+    <div>
+      <div style="background:#F9EED7">
+        <img src="img/teacher/detail.jpg" style="width:100%">
+      </div>
+      <div class="contac">
+        <span style="color: #fff;line-height: 26px;">关注</span>
+        <span style="width: 30px;height: 26px;float: right;" ng-class="details.default==1?'focus':'unfocu'" ng-click="select({id:details.id})" ></span>
+      </div>
+      <div style="background:#F9EED7">
+        <div class="avatar-box">
+          <img ng-src="{{details.avatar}}" style="width: 70px;height: 70px;border-radius: 50%;">
+        </div>
+
+      </div>
+    </div>
+    <!-- 教师详情信息列表 -->
+    <div class="info">
+      <ul>
+        <li>
+          <div class="name">
+            <span style="color:#fff;line-height:40px;font-size:18px" ng-bind="details.name"></span>
+          </div>
+        </li>
+        <li style="color:#373838">粉丝&nbsp;:&nbsp;<span ng-bind="details.follow"></span></li>
+        <li style="color:#666" ng-bind="details.autograph"></li>
+        <li style="color:#666" ng-bind="details.school"></li>
+        <li style="color:#666" ><span >{{time}}</span>成为家庭教师</li>
+        <li style="color:#eb6761">正在给<span ng-bind="details.doing">4</span>位学生上课</li>
+        <li><i style="color:#eb6761;font-size:18px">￥<span ng-bind="details.cost"></span></i><i style="color:#B5B1AB">/小时</i></li>
+      </ul>
+    </div>
+    <!-- 科目 -->
+    <div style="background:#fff">
+     <div >
+      <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">科目</span>
+    </div>
+    <div style="padding:0px 10px 5px 10px">
+      <div class="study row">
+       <span class="col" ng-repeat="items in details.subjects" ng-bind="items.name"></span>
+     </div>
+   </div>
+        <!--年级  -->
+            <div >
+                <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">可教年级</span>
+            </div>
+            <div style="padding:0px 10px 5px 10px">
+                <div class="study row">
+                    <span style="padding: 1px 5px;" class="col" ng-repeat="itemc in details.grade" ng-bind="itemc.grade_name"></span>
+                </div>
+            </div>
+   <!-- 技能标签 -->
+   <div >
+       <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">技能标签</span>
+   </div>
+   <div style="padding:0px 10px 5px 10px">
+    <div class="power">
+      <span style="background:#FF5B46" ng-repeat="items in details.ability" ng-bind="items.teach_ability"></span>
+    </div>
+  </div>
+  <!-- 个人相册 -->
+  <div>
+      <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">个人相册</span>
+  </div>
+   <p ng-show="details.album==null || details.album==''" style="text-align: center;margin: 20px 0;">本人暂无个人相册！</p>
+
+        <!-- 相册轮播 -->
+  <div style="padding:10px">
+    <div style="border-top:1px solid #ddd;padding-top:10px" >
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ng-repeat="items in details.album" >
+            <a class="move_box">
+              <div class="package_pic">
+                <div class="pic_bg"></div>
+                <img ng-click="openModal($event)" ng-src="{{items.imgurl}}" style="width: 110px;height: auto;">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 评分及评论 -->
+  <div>
+    <span style="line-height: 40px;"><span style="color: #eb6761;margin: 10px;font-size: 18px;">评分及评论</span></span>
+    <span style="float:right;margin-right:10px;color:#007062;line-height:40px;"><i style="color:#666">综合评分:</i>&nbsp;&nbsp;<span ng-bind="details.score"></span></span>
+  </div>
+  <div style="padding-top:10px" ng-repeat="ites in details.pingjia">
+    <div style="border-top:1px solid #ddd;">
+      <span class="item item-avatar" style="border:none;margin:0" ui-sref="teacher-detail">
+       <img ng-src="{{ites.avatar}}">
+       <h2 style="margin-top:10px" ng-bind="ites.name"></h2>
+       <span style="float:right;position:relative;bottom:20px;font-size:14px" >{{ites.evatime*1000|date: 'yyyy-MM-dd'}}</span>
+     </span>
+   </div>
+   <div style="padding-left:10px" ng-bind="ites.evaluate"></div>
+ </div>
+ <div>
+  <button class="yue" ui-sref="teacher-yue1(({id: details.id}))">立即预约</button>
+</div>
+</div>
+</ion-content>
+</ion-view>

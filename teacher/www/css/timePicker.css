@@ -1,0 +1,95 @@
+
+/*ʱ��ѡ��������ʽ*/
+
+
+@keyframes  ttanimations {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity:1
+    }
+}
+.datetimeactive {
+    -webkit-animation-name: ttanimations;
+    animation-name: ttanimations;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.pickerContainer{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+    z-index: 20;
+   /* align-items: center;
+    justify-content: center;8*/
+}
+
+.pickerContainer .main {
+    position: relative;
+    background-color: #fff;
+    width: 90%;
+    margin:0 auto;
+    margin-top:35%;
+    height: 430px;
+    border-radius: 3px;
+}
+.pickerContainer .dateContent,.pickerContainer .timeContent {
+    display: inline-block;
+    height: 270px;
+    width: 50%;
+    /*overflow: hidden;*/
+}
+.pickerContainer .header {
+    height: 50px;
+    border-bottom: 1px solid #EBEBEB;
+    text-align: center;
+    line-height:50px;
+}
+.pickerContainer .body {
+
+}
+.pickerContainer .body::after{
+   content: '';
+   clear: both;
+   display: block;
+   height: 0px;
+   visibility: hidden;
+}
+.pickerContainer ul li{
+    height: 40px;
+    line-height: 40px;
+    color:#a9a9a9;
+    text-align: center;
+}
+.pickerContainer ul li .selected{
+    background-color: white;
+    /*color: rgb(5,5,5);*/
+    color: #ff8c00;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.pickerContainer .footer {
+    border-top: 1px solid #EBEBEB;
+    height:50px;
+}
+.pickerContainer .footer::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 44px;
+    left: 50%;
+    background-color: #EBEBEB;
+}
+.pickerContainer span{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    line-height: 50px;
+}

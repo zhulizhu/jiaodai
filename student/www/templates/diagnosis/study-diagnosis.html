@@ -1,0 +1,47 @@
+<ion-view view-title="诊断问题">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+    <h1 class="title" style="color:#fff;">教带</h1>
+  </ion-header-bar>
+  <ion-content id="problem" class="bk">
+   <div style="padding:30px 10px 6px;">
+    <div class="title-top" >
+            <h4>问题<span ng-bind="page"></span></h4>
+           <div class="problem-content" >{{ti.name}}
+           </div>
+    </div>
+
+    <div class="choose-item" ng-repeat="chose in ti.option"  ng-show="ti.option!==null && ti.option!==''" >
+         <ul>
+           <li ng-show="ti.is_checkbox==0" ng-class="state==chose.id?'have-active':''"  ng-click="selectAnswer({id:chose.id,tid:ti.id,cid:ti.cid,checkbox:ti.is_checkbox})" ng-bind="chose.answer"></li>
+           <li ng-show="ti.is_checkbox==1"  ng-class="chose.checked ? 'have-active' : ''"  ng-click="checkMore(chose)" ng-bind="chose.answer"></li>
+         </ul>
+    </div>
+    <div class="choose-item" ng-show="ti.option==null || ti.option==''" >
+         <ul>
+               <li ng-show="ti.is_checkbox==2"    style="min-height: auto!important;">
+                   <input type="text" placeholder="请输入您孩子的年级排名，例如100/300" ng-model="answer.val"  style="width: 100%;padding-left: 10px;border: 1px solid #eb6761;">
+               </li>
+
+         </ul>
+    </div>
+</div>
+<div style="width: 100%;margin-top: 20px;padding: 10px;" ng-show="ti.is_checkbox==1  ">
+  <button style="color: #fff;border:none;background-color: #eb6761;padding:6px 12px;width: 100%;height: 31px;border-radius: 5px;" ng-click="selectAnswer({id:xid,tid:ti.id,cid:ti.cid,checkbox:ti.is_checkbox})">下一题</button>
+</div>
+<div style="width: 100%;margin-top: 20px;padding: 10px;" ng-show="ti.is_checkbox==2  ">
+          <button style="color: #fff;border:none;background-color: #eb6761;padding:6px 12px;width: 100%;height: 31px;border-radius: 5px;" ng-click="selectAnswer({id:answer.val,tid:ti.id,cid:ti.cid,checkbox:ti.is_checkbox})">下一题</button>
+</div>
+<!-- 题目切换栏 -->
+<div class="t-tab">
+  <div class="box">
+  </div>
+  <div class="weizhi">
+    <span class="num" ng-bind="page"></span>
+   <!--  <span class="num1">16</span> -->
+  </div>
+</div>
+
+
+
+</ion-content>
+</ion-view>

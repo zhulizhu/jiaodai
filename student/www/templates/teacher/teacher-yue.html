@@ -1,0 +1,167 @@
+<ion-view view-title="预约教师">
+  <!--<ion-header-bar align-title="center" style="background:#eb6761;">-->
+  <!--<yike-back style="color:#fff;"></yike-back>-->
+  <!--<h1 class="title" style="color:#fff;">预约教师</h1>-->
+ <!--</ion-header-bar>-->
+  <ion-content id="teacher-detail">
+    <!-- 详情封面头像 -->
+    <form  id="myform" action="/index.php/apicloud/order/addOrder" method="post" >
+      <input type="hidden" name="openid" ng-model="TOKEN" value="{{TOKEN}}">
+      <input type="hidden" name="tid" ng-model="id" value="{{id}}">
+      <div>
+        <div style="background:#F9EED7">
+          <img src="img/teacher/detail.jpg" style="width:100%">
+        </div>
+        <div style="background:#F9EED7">
+        <div class="avatar-box">
+          <img ng-src="{{orders.avatar}}">
+        </div>
+        </div>
+      </div>
+      <!-- 教师详情信息列表 -->
+      <div class="info">
+        <ul>
+          <li>
+            <div class="name">
+              <span style="color:#fff;line-height:40px;font-size:18px" ng-bind="orders.name">李晓杰</span>
+            </div>
+          </li>
+          <li style="color:#373838">粉丝&nbsp;:&nbsp;<span ng-bind="orders.follow">492</span></li>
+          <li style="color:#666" ng-bind="orders.autograph">教学时我一生的乐趣所在</li>
+          <li style="color:#666" ng-bind="orders.school">天津理工大学</li>
+          <li style="color:#666"><span ng-bind="time">2016年4月</span>成为家庭教师</li>
+          <li style="color:#eb6761">正在给<span ng-bind="orders.doing">4</span>位学生上课</li>
+          <li><i style="color:#eb6761;font-size:18px">￥<span ng-bind="orders.cost">90</span></i><i style="color:#B5B1AB">/小时</i></li>
+        </ul>
+      </div>
+    <!--年级  -->
+    <div >
+      <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">可教年级</span>
+    </div>
+    <div style="padding:0px 10px 5px 10px">
+      <div class="study row">
+        <span style="padding: 1px 5px;" class="col" ng-repeat="itemc in orders.grade" ng-bind="itemc.grade_name"></span>
+      </div>
+    </div>
+      <!-- 科目 -->
+      <div >
+        <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">科目</span>
+      </div>
+      <div style="padding:0px 10px 5px 10px">
+        <div class="study row" id="subject">
+         <span class="col" ng-click="choseClass(sub)" ng-class="user.subjec_id==sub.id ? 'sub-active' : ''" ng-repeat="sub in orders.subjects" ng-bind="sub.name">物理</span>
+          <input type="hidden" name="subjec" ng-model="user.subjec" value="{{user.subjec}}">
+          <input type="hidden" name="subjec_id" ng-model="user.subjec_id" value="{{user.subjec_id}}">
+        </div>
+
+      </div>
+
+      <!-- 课程数量 -->
+      <div style="overflow: hidden">
+        <span style="float: left">
+          <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">课程数量</span>
+        </span>
+        <span style="float:right;padding-right:10px">
+          <i style="font-size:14px;color:#eb6761">￥</i>
+          <i style="font-size:18px; color:#eb6761" ng-bind="deposit">88.00</i>
+          <i style="font-size:14px;color:#B6B2AC">/押金</i>
+        </span>
+      </div>
+       <div style="padding:0px 10px 5px 10px">
+        <div class="row period">
+         <span   class="col" ng-click="choseNum(order)" ng-class="user.class_num_id==order.id ? 'sub-active' : ''" ng-repeat="order in orders.classNum" ><span ng-bind="order.name"></span><span class="fx" ng-show="order.discount>0"><i ng-bind="order.discount" ></i>折</span></span>
+          <input type="hidden" name="class_num_id" ng-model="user.class_num_id" value="{{user.class_num_id}}">
+        </div>
+         <p ng-bind="describe" style="padding-left: 1em;font-size: 12px;margin-bottom: 0px"></p>
+      </div>
+      <!-- 选择课程时间 -->
+      <div ng-hide="orders.week.length==0">
+        <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">课程时间</span>
+      </div>
+      <div class="day" ng-hide="orders.week.length==0">
+        <span ng-click="choseWeek(wek)" ng-class="xqWek==wek.week ? 'sub-active' : ''" ng-repeat="wek in orders.week" ng-bind="wek.day" >星期日</span>
+        <input type="hidden" name="time" ng-model="user.time" value="{{user.time}}">
+      </div>
+       <div style="border-top:1px dashed #ddd;padding-top:10px" ng-hide="weeks.AM.default==0 || orders.week.length==0">
+        <span class="morning">上午</span>
+      </div>
+      <div class="time" ng-hide="weeks.AM.default==0 || orders.week.length==0">
+        <span ng-click="choseTimea(am)" ng-class="user.class_id==am.id ? 'sub-active' : ''" ng-repeat="am in weeks.AM" ng-bind="am.time" ng-disabled="am.disable==1">AM&nbsp;8:00-8:45</span>
+        <input type="hidden" name="class_id" ng-model="user.class_id" value="{{user.class_id}}">
+      </div>
+      </div>
+       <div style="padding-top:10px" ng-hide="weeks.PM.default==0 || orders.week.length==0">
+        <span class="morning">下午</span>
+      </div>
+      <div class="time" ng-hide="weeks.PM.default==0 || orders.week.length==0">
+        <span ng-click="choseTimea(pm)"   ng-class="user.class_id==pm.id ? 'sub-active' : ' '" ng-repeat="pm in weeks.PM" ng-bind="pm.time" ng-disabled="pm.disable==1">PM&nbsp;1:00-1:45</span>
+      </div>
+      </div>
+      <!-- 学生信息 -->
+      <div style="padding-top:10px">
+        <span style="color: #eb6761;display: block;margin: 10px;font-size: 18px;">学生信息</span>
+      </div>
+      <div style="padding-left:10px;">
+        <div style="margin-bottom:10px"><span class="subject-address">上课地点:</span></div>
+      </div>
+      <div class="row" style="padding-left:10px">
+          <!-- <span class="choose-area">请选择行政区</span> -->
+          <select style="width: 30%"   ng-model="user.city" ng-options="x.val as x.area for x in areas"></select>
+        <input type="hidden" name="city"  ng-model="user.city" ng-value="user.city">
+          <span style="width:70%">
+
+          <input type="text" class="input" name="detailAddress" placeholder="请输入详细地址" style="border:1px solid #ddd;height:34px;width:90%;padding-left:10px;" ng-model="user.detailAddress">
+          </span>
+        </div>
+      <!-- 学生姓名 -->
+      <div class="row" style="margin-top:5px;line-height:44px">
+        <span class="col" style="line-height:44px">学生姓名:</span>
+        <span class="col-76" style="overflow: hidden">
+           <span style="float:left;width:60%"><input type="text" name="studentName" placeholder="请输入学生姓名" style="border:1px solid #ddd;padding-left:10px;width:90%;margin-top:4%" ng-model="user.studentName"></span>
+        <span style="float:left;line-height:44px">性别:
+          <span ng-class="user.sex==2?'boy':''" ng-click="select(2)" style="margin-left:10px">男</span>
+          <span ng-class="user.sex==1?'girl':''" ng-click="select(1)" style="margin-left:10px">女</span>
+          <input type="hidden" name="
+
+
+          " ng-model="user.sex" value="{{user.sex}}">
+        </span>
+        </span>
+
+      </div>
+      <!-- 年级 -->
+      <div class="row" >
+        <span class="col" style="line-height:30px">年级:</span>
+        <span class="col-76">
+           <select style="width: 90%;line-height:34px;height: 34px;"  ng-model="user.grade"  ng-options="x.id as x.name for x in grades"></select>
+          <!-- <span style="padding:0px 18px">请选择年级</span> -->
+        <input type="hidden" name="grade"  ng-model="user.grade " ng-value="user.grade">
+        </span>
+
+      </div>
+      <!-- 学校 -->
+       <div class="row">
+        <span class="col" style="line-height:34px;">学校:</span>
+        <span class="col-76"><input name="school" ng-model="user.school" type="text" placeholder="请输入学生所在学校名称" style="border:1px solid #ddd;width:90%;padding-left:10px;margin-top:2%"></span>
+      </div>
+      <!-- 家长姓名 -->
+      <div class="row">
+        <span class="col" style="line-height:34px">家长姓名:</span>
+        <span class="col-76"><input name="jzName" ng-model="user.jzName" type="text" placeholder="请输入家长姓名" style="border:1px solid #ddd;width:90%;padding-left:10px;margin-top:2%"></span>
+      </div>
+      <div class="row">
+        <span class="col" style="line-height:34px">联系电话:</span>
+        <span class="col-76" style="overflow: hidden;"><input name="phone" ng-model="user.phone" type="text" placeholder="请输入电话号码" style="border:1px solid #ddd;width:50%;padding-left:10px;margin-top:2%;float: left">
+        <button type="button" style="width:38%;float: right;line-height: 30px;min-height:auto; margin-top: 6px;font-size: 13px;background-color: #eb6761;margin-right: 10%" class="button button-energized yzm send-msg" ng-click="sendMsg()">发送验证码</button>
+        </span>
+      </div>
+      <div class="row" style="line-height:34px">
+        <span class="col">验证码:</span>
+        <span class="col-76"><input name="code" ng-model="user.code" type="text" placeholder="请输入验证码" style="border:1px solid #ddd;width:50%;padding-left:10px;margin-top:2%" ></span>
+      </div>
+      <div style="margin-bottom: 20px;">
+        <button type="button" class="complate"  ng-click="complateYu()">完成预约</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view view-title="教师">
+ <ion-header-bar align-title="center" style="background:#eb6761;">
+  <h1 class="title" style="color:#fff;">教带</h1>
+ </ion-header-bar>
+  <ion-content class="padding" id="teacher">
+  	<!-- 适合的家教 -->
+    <div class="home-teacher">适合您的家教</div>
+    <!-- 您孩子所在年级和所在地区 -->
+    <div>
+    	<div class="grade">您孩子所在的年级</div>
+    	<div data-tap-disabled="true">
+            <select style="width: 100%" ng-model="selected" ng-options="x.id as x.name for x in grades"></select>
+    	</div>
+    	<div class="grade">您孩子上课地点所在的行政区</div>
+    	<div data-tap-disabled="true">
+            <select style="width: 100%" ng-model="selectd" ng-options="x.val as x.area for x in areas"></select>
+    	</div>
+    </div>
+    <div>
+        <button class="chose-teacher"  ui-sref="teacher-list({gid:selected,address:selectd})">去选择我的老师</button>
+    </div>
+  </ion-content>
+</ion-view>

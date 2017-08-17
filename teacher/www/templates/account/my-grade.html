@@ -1,0 +1,18 @@
+<ion-view view-title="我的可授年级">
+ <ion-header-bar align-title="center" style="background:#F08080;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">我的可授年级</h1>
+ </ion-header-bar>
+  <ion-content id="my-grade">
+  	<!-- 我的收入 -->
+  	<div class="income" style="overflow: hidden;">
+        <span style="float:left;color: #F08080;display: block;margin: 10px;font-size: 18px;">我的可授年级</span>
+      <img class="add" src="img/tabs/jiahao.png" ng-click="openModal()">
+  	</div>
+    <div class="grad" ng-repeat="grade in grades">
+      <img  ng-src="{{grade.avatar}}"><span ng-bind="grade.grade_name">初中一年级</span><i class="ion-trash-a" ng-click="delList(grade)"></i>
+    </div>
+      <p ng-show="stat==0" style="text-align: center;margin: 60px 0;">没有添加可授年级！</p>
+
+  </ion-content>
+</ion-view>

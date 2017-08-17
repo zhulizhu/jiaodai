@@ -1,0 +1,104 @@
+
+<ion-modal-view id="add-bank-modal">
+    <div class="week">
+       <span>选择每周上课时间</span>
+
+       <span class="save" ng-click="save({week:selected})" style="padding:5px 10px;">保存</span>
+        <span class="save" style="margin-right: 20px;" ng-click="closeModal()" style="padding:5px 10px;">取消</span>
+    </div>
+    <div class="row"  data-tap-disabled="true">
+        <select style="height: 35px;" class="select" ng-model="selected" ng-options="y.val as y.id for y in week ">
+
+        </select>
+    </div>
+    <div class="div-time">
+        <div class="time-div"><span class="settime">设置开始时间</span></div>
+        </div>
+    <ion-scroll  delegate-handle='timeScroll' scrollbar-y='false'  class="timeStart">
+        <ul>
+            <li>8:00</li>
+            <li>8:30</li>
+            <li>9:00</li>
+            <li>9:30</li>
+            <li>10:00</li>
+            <li>10:30</li>
+            <li>11:00</li>
+            <li>11:30</li>
+            <li>12:00</li>
+            <li>12:30</li>
+            <li>13:00</li>
+            <li>13:30</li>
+            <li>14:00</li>
+            <li>14:30</li>
+            <li>15:00</li>
+            <li>15:30</li>
+            <li>16:00</li>
+            <li>16:30</li>
+            <li>17:00</li>
+            <li>17:30</li>
+            <li>18:00</li>
+            <li>18:30</li>
+            <li>19:00</li>
+            <li>19:30</li>
+            <li>20:00</li>
+            <li>20:30</li>
+            <li>21:00</li>
+            <li>21:30</li>
+            <li>22:00</li>
+            <li>20:30</li>
+            <li>21:00</li>
+            <li>21:30</li>
+            <li>22:00</li>
+            <li>22:30</li>
+            <li>23:00</li>
+            <li>23:30</li>
+            <li>24:00</li>
+        </ul>
+    </ion-scroll>
+    </div>
+    <div class="div-time">
+        <div class="time-div"><span class="settime">设置结束时间</span></div>
+        </div>
+    <ion-scroll  delegate-handle='timeScroll' scrollbar-y='false'  class="timeEnd">
+        <ul>
+            <li>8:00</li>
+            <li>8:30</li>
+            <li>9:00</li>
+            <li>9:30</li>
+            <li>10:00</li>
+            <li>10:30</li>
+            <li>11:00</li>
+            <li>11:30</li>
+            <li>12:00</li>
+            <li>12:30</li>
+            <li>13:00</li>
+            <li>13:30</li>
+            <li>14:00</li>
+            <li>14:30</li>
+            <li>15:00</li>
+            <li>15:30</li>
+            <li>16:00</li>
+            <li>16:30</li>
+            <li>17:00</li>
+            <li>17:30</li>
+            <li>18:00</li>
+            <li>18:30</li>
+            <li>19:00</li>
+            <li>19:30</li>
+            <li>20:00</li>
+            <li>20:30</li>
+            <li>21:00</li>
+            <li>21:30</li>
+            <li>22:00</li>
+            <li>20:30</li>
+            <li>21:00</li>
+            <li>21:30</li>
+            <li>22:00</li>
+            <li>22:30</li>
+            <li>23:00</li>
+            <li>23:30</li>
+            <li>24:00</li>
+        </ul>
+    </ion-scroll>
+    </div>
+</ion-modal-view>

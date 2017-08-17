@@ -1,0 +1,25 @@
+<ion-view view-title="登录界面">
+  <ion-header-bar align-title="center" style="background:#44A8FA;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">登录界面</h1>
+ </ion-header-bar>
+  <ion-content id="login-page">
+    <div>
+      <img src="img/login/login-page.png" style="width:60%;display:block;margin:40px auto">
+    </div>
+     <div class="enters">
+        <div class="enters-top">
+          <input type="tel" placeholder="请输入账号" ng-model="formValue.tel" maxlength="11" id="phone">
+        </div>
+        <div class="enters-bottom">
+          <input type="password" placeholder="请输入密码" ng-model="formValue.password" maxlength="16" id="password">
+        </div>
+      </div>
+    <button ng-click="login()">登录</button>
+    <p>
+      <span class="register" ui-sref="register">注册</span>
+      <span class="forget">忘记密码</span>
+    </p>
+    <p style="color:#0079EA" ui-sref="phone-login">手机验证登录</p>
+  </ion-content>
+</ion-view>

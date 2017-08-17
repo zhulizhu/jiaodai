@@ -1,0 +1,56 @@
+<ion-view view-title="教师列表" id="teacher-background">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">教师列表</h1>
+ </ion-header-bar>
+  <ion-content id="teacher-list" class="padding">
+      <div class="teacher-home" style="overflow: hidden;">
+      	<span style="float: left">
+          <span  style="display:block;color: #eb6761;margin:0 10px;padding:10px 0;font-size: 18px;">适合您的家教</span>
+        </span>
+      	<span class="more-choose" ng-click="openModal()">更多选择</span>
+      </div>
+      <!-- 教师列表 -->
+    <div style="border:1px solid #ddd;">
+      	<div class="list" style="background:#fff;position: relative;" ng-repeat="items in lists"  >
+   		<span class="item item-avatar" ui-sref="teacher-detail({id: items.id})" style="border:none;margin:0;padding-right:5px;" >
+   			<img ng-src="{{items.avatar}}" ng-click="selectImg()" id="myImage">
+        <input type="file" id="file" style="display:none">
+   			<h2><i ng-bind="items.name"></i><i style="float:right;font-size:14px;color:#F13A47">￥<span ng-bind="items.cost"></span><i style="color:#666">/小时</i></i></h2>
+   			<p style="padding-top:6px">
+          <span ng-bind="items.autograph"></span>
+          
+        </p>
+        
+   		</span>
+      <div style="position: absolute;top:41px;right:5px;z-index: 9999">
+        <span ng-class="items.default==1?'focus':'unfocus'" ng-click="select({id:items.id})" ></span><span style="line-height: 26px;" ng-bind="items.follow"></span>
+      </div>
+
+   		<div class="project" >
+      <p>擅长的学科</p>
+   			<span ng-repeat="item in items.subjects">{{item.name}}</span>
+   		</div>
+   		<div class="big-teacher">
+      <p>教学风格</p>
+   		<span ng-repeat="item in items.style">{{item.name}}</span>
+   		</div>
+      <div class="big-teacher">
+      <p>教学特色</p>
+      <span ng-repeat="item in items.tese">{{item.name}}</span>
+
+      </div>
+      <div class="big-teacher">
+      <p>擅长解决学生的问题</p>
+      <span ng-repeat="item in items.ability">{{item.teach_ability}}</span>      
+      </div>
+      <div class="row comment">
+        <span class="col left">历史授课&nbsp;&nbsp;<i style="font-size:18px;color:#FFB400" ng-bind="items.history"></i></span>
+        <span class="col right">综合评分&nbsp;&nbsp;<i style="font-size:18px;color:#FFB400" ng-bind="items.score"></i></span>
+      </div>
+   		</div>
+    </div>
+      <p ng-show="stat==0" style="text-align: center;margin: 60px 0;">没有相应的老师列表！</p>
+
+  </ion-content>
+</ion-view>

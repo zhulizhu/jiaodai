@@ -1,0 +1,148 @@
+<ion-view view-title="课程详情">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+    <yike-back style="color:#fff;"></yike-back>
+    <h1 class="title" style="color:#fff;">课程详情</h1>
+  </ion-header-bar>
+  <ion-content id="our">
+    <!-- 我的顶部背景图-->
+    <div class="our-box">
+    	<img src="img/account/our.png" style="width:100%">
+    	<div class="account-avatar">
+       <img ng-src="{{infors.avatar}}" style="width:100%;height:100%;border-radius: 50%;">
+     </div>
+     <span class="u-name" ng-bind="infors.username">李晓杰</span>
+   </div>
+   <!-- 课后指导 -->
+   <div class="after">
+    <div><span  style="display:block;color: #eb6761;font-size: 18px;">课后指导</span></div>
+    <!-- 课后知道具体内容 -->
+    <div class="after-content">
+      <div class="avatar-two">
+        <img ng-src="{{detail.avatar}}" style="width:100%;height:100%;border-radius: 50%;">
+      </div>
+      <div class="after-info">
+        <div style="padding:10px">
+          <div class="fs4 hk">
+            <span ng-bind="detail.name">李小杰</span><span ng-show="detail.default==0" class="none" style="color:#FF4B42">课后作业未完成</span><span ng-show="detail.default==1" class="none" style="color:#FF4B42">课后作业已完成</span>
+          </div>
+          <div class="hk">
+            <span><i ng-bind="detail.day">2017年4月26日</i>&nbsp;&nbsp;<i ng-bind="detail.week">星期四</i>&nbsp;&nbsp;<i ng-bind="detail.cateName">英语</i></span><span class="none" ng-bind="detail.time">AM 8:30-9:45</span>
+          </div>
+          <div class="hk fs4">课后指导</div>
+          <div ng-bind="detail.zhidao">
+            课后指导课后指导课后指导课后指导课后指导课后指导课后指导课后指导课后指导课后指导课后指导
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 课后知识点级笔记回顾 -->
+    <!-- <div class="after">
+      <div><img src="img/account/notebook.png" style="width:60%"></div>
+    </div> -->
+    <!-- 相册轮播 -->
+    <!-- <div style="padding:0px 10px">
+      <div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="move_box">
+                            <div class="package_pic">
+                                <div class="pic_bg"></div>
+                                <img src="img/account/subject-detail01.png">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="move_box">
+                            <div class="package_pic">
+                                <div class="pic_bg"></div>
+                                <img src="img/account/subject-detail01.png ">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="move_box">
+                            <div class="package_pic">
+                                <div class="pic_bg"></div>
+                                <img src="img/account/subject-detail02.png ">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="move_box">
+                            <div class="package_pic">
+                                <div class="pic_bg"></div>
+                                <img src="img/account/subject-detail02.png ">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div> -->
+    <!--课后作业  -->
+    <div class="after">
+      <div ng-hide="detail.zuoye==null"><span  style="display:block;color: #eb6761;font-size: 18px;">课后作业</span></div>
+      <div>
+        <ul>
+          <li class="li-enp" ng-repeat="cont in detail.zuoye">
+            <span class="enp" ng-disabled="cont.zuoye_status==1" ng-click="resolve(cont)" ng-class="cont.zuoye_status==1? 'our-active' : ''">完成</span><span ng-bind="cont.content" style="line-height:30px;padding-left:10%">背诵6个单词，要求会读，会写</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--评价 -->
+    <div class="recommend">
+      <div><span  style="display:block;color: #eb6761;font-size: 18px;">评价</span></div>
+      <div ng-show="detail.eva==0">
+        <div style="width:50%;margin:0 auto">
+          <div class="evaluation-num">
+            <span style="vertical-align: middle;">
+             <img ng-src="img/account/star-focus.png" ng-show="payload.star > 0" ng-click="payload.star = 1">
+             <img ng-src="img/account/star-focus.png" ng-show="payload.star > 1" ng-click="payload.star = 2">
+             <img ng-src="img/account/star-focus.png" ng-show="payload.star > 2" ng-click="payload.star = 3">
+             <img ng-src="img/account/star-focus.png" ng-show="payload.star > 3" ng-click="payload.star = 4">
+             <img ng-src="img/account/star-focus.png" ng-show="payload.star > 4" ng-click="payload.star = 5">
+             <img ng-src="img/account/star-unfocus.png"  ng-show="payload.star < 1" ng-click="payload.star = 1">
+             <img ng-src="img/account/star-unfocus.png"  ng-show="payload.star < 2" ng-click="payload.star = 2">
+             <img ng-src="img/account/star-unfocus.png"  ng-show="payload.star < 3" ng-click="payload.star = 3">
+             <img ng-src="img/account/star-unfocus.png"  ng-show="payload.star < 4" ng-click="payload.star = 4">
+             <img ng-src="img/account/star-unfocus.png"  ng-show="payload.star < 5" ng-click="payload.star = 5">
+           </span>
+         </div>
+       </div>
+       <div>
+        <div class="text-area">
+          <textarea ng-model="payload.cont"></textarea>
+        </div>
+      </div>
+      <div>
+        <button class="complete-btn" ng-click="evaluate()">完成评价</button>
+      </div>
+    </div>
+    <div ng-show="detail.eva==1" class="eval">
+      <div class="top">
+        <div class="le">
+          <img ng-src="{{infors.avatar}}">
+        </div>
+        <div class="lef">
+          <p ng-bind="infors.username"></p>
+          <p ng-bind="detail.evatime"></p>
+        </div>
+        <div class="righ">
+           <img ng-src="img/account/star-focus.png" ng-show="detail.stars > 0" >
+             <img ng-src="img/account/star-focus.png" ng-show="detail.stars > 1" >
+             <img ng-src="img/account/star-focus.png" ng-show="detail.stars > 2" >
+             <img ng-src="img/account/star-focus.png" ng-show="detail.stars > 3" >
+             <img ng-src="img/account/star-focus.png" ng-show="detail.stars > 4" >
+          
+        </div>
+      </div>
+      <div>评价：<p ng-bind="detail.evaluate"></p></div>
+
+      
+    </div>
+  </div>
+</ion-content>
+</ion-view>

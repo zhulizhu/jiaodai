@@ -1,0 +1,48 @@
+<ion-view view-title="课程列表">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">课程列表</h1>
+ </ion-header-bar>
+  <ion-content id="our">
+    <!-- 我的顶部背景图-->
+    <div class="our-box">
+    	<img src="img/account/our.jpg" style="width:100%">
+    	<div class="account-avatar">
+    	  <img ng-src="{{infors.avatar}}" style="width:100%;border-radius: 50%;">
+    	</div>
+    	<span class="u-name" ng-bind="infors.username">李晓杰</span>
+    </div>
+    <!-- 我已结束的课程-->
+    <div class="end-subject">
+      <span class="end">我已结束的课程</span>
+    </div>
+    <div  class=" subject-list" style="border-top:1px solid #ddd;margin-top:10px;padding:20px 0px;border-bottom:1px solid #ddd;height: auto;overflow: hidden;">
+      <span     ng-repeat="subject in subjects" ng-bind="subject.name" ng-click="choseSub(subject.id)" ng-class="state==subject.id ? 'subActive' : ''">语文</span>
+    </div>
+    <div style="padding:10px;border-bottom:1px solid #ddd;" ng-repeat="list in lists" ui-sref="subject-detail({id:list.id})">
+      <div style="border-bottom:1px solid #ddd;padding-bottom:10px">
+        <span ng-bind="list.day">2017年2月12日<i ng-bind="list.week">星期四</i><i ng-bind="list.cateName">英语</i></span>
+        <span ng-bind="list.time">AM&nbsp;8:30-9:45</span>
+      </div>
+      <div class="avatar-body" >
+        <div class="subject-avatar">
+         <img ng-src="{{list.avatar}}" style="width:100%;border-radius: 50%;">
+        </div>
+        <span class="name" ng-bind="list.name">李晓杰</span>
+        <span class="work" ng-show="list.default==0">课后作业未完成</span>
+        <span class="work" ng-show="list.default==1">课后作业已完成</span>
+      </div>
+      <div >
+        <div style="padding:20px 0px;border-bottom:1px solid #ddd;">
+          <span>课后指导:</span>
+        </div>
+        <div style="padding-bottom:10px" ng-bind="list.zhidao">
+          课后指导内容课后知道课后指导内容课后知道课后指导内容课后知道课后指导内容课后知道课后指导内容课后知道
+           课后指导内容课后知道课后指导内容课后知道课后指导内容课后知道课后指导内容课后知道课后指导内容课后知道
+        </div>
+      </div>
+    </div>
+    <p ng-show="stat==0" style="text-align: center;margin: 60px 0;">没有历史课程！</p>
+
+  </ion-content>
+</ion-view>

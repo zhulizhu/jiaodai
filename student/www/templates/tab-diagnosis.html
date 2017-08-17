@@ -1,0 +1,30 @@
+<ion-view view-title="诊断" id="background-diagnosis">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+
+  <h1 class="title" style="color:#fff;">教带</h1>
+  </ion-header-bar>
+  <ion-content  id="diagnosis">
+
+  <!-- loading引导页 -->
+    <div class="loading" ng-show="loading"></div>
+    <div class="avatar">
+      <div class="head-box">
+        <img src="img/tabs/avatar.png">
+      </div>
+    </div>
+    <h4 ng-bind="slogan" style="text-align: center;margin-top: 35px;"></h4>
+    <div class="content"></div>
+    <div>
+    <!--   <div>
+        <img src="img/diagnosis/banner.png" style="width:100%;height:200px;padding:0 10px;">
+      </div> -->
+      <div style="padding:10px 10px">
+        <button class="button-start" ui-sref="study-diagnosis">开始学习诊断</button>
+
+        <div ng-hide="last==0">
+          <span class="report"  ui-sref="last-report"><a  href="#" style="color:#B4ACA2;border-bottom:1px solid #B4ACA2">查看上次诊断记录</a></span>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

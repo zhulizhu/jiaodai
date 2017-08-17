@@ -1,0 +1,754 @@
+/* Empty. Add your own CSS if you like */
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated{color:#F08080;}
+.tab-home{ background: url("../img/tabs/diagnosis.png") no-repeat center; background-size: 25px;color: #a6a6a6;}
+.tab-home-active{ background: url("../img/tabs/diagnosis-active.png") no-repeat  center; background-size: 25px; color: #ffbc00;}
+.tab-recharge{ background: url("../img/tabs/teacher.png") no-repeat center; background-size: 25px;}
+.tab-recharge_active{ background:  url("../img/tabs/teacher-active.png") no-repeat center; background-size: 25px;}
+.tab-package{ background: url("../img/tabs/account.png") no-repeat center;background-size: 25px;}
+.tab-package_active{ background:  url("../img/tabs/account-active.png") no-repeat  center; background-size: 25px;}
+.tab-nav.tabs{background-image: linear-gradient(0deg, ##009DD9, ##009DD9 50%, transparent 50%); border-top:1px solid ##009DD9;background-color: #fff;}
+/*我的课程*/
+#teacher-subject{ background:url("../img/tabs/teacher-background.jpg") no-repeat center; background-size:100% 100%;}
+#teacher-subject .img{width:26%;}
+#teacher-subject .history{float:right;line-height:36px;color: #666;
+    font-weight: bold;}
+#teacher-subject .subject{margin-top:10px;}
+#teacher-subject .date{padding-left:1rem; background:url("../img/tabs/class.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#teacher-subject .classtime{padding-left:1rem; background:url("../img/tabs/week.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#teacher-subject .english{color:#F08080;font-size:14px;}
+#teacher-subject .detail{width:34px;height:70px;position:absolute;right:2%;top:20%;z-index:1000;border:2px solid #F08080;}
+#teacher-subject .biao{position:relative;margin-bottom:4px;}
+/*我的学生*/
+#student{ background:url("../img/tabs/teacher-background.jpg") no-repeat center; background-size:100% 100%;}
+#student .img{width:26%;}
+#student .history{float:right;line-height:36px;color:#928F8A;}
+#student .subject{margin-top:10px;}
+#student .xm{padding-left:1rem; background:url("../img/tabs/jz.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#student .xx{padding-left:1rem; background:url("../img/tabs/xx.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#student .dz{padding-left:1rem; background:url("../img/tabs/dz.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#student .dh{padding-left:1rem; background:url("../img/tabs/sj.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#student .english{color:#F08080;font-size:12px;}
+#student .detail{color: #fff;text-align: center;font-size: 12px;width:65px;height:22px;position:absolute;right:1%;top:7%;z-index:1000;background:url("../img/tabs/nj.png") no-repeat center center;background-size:100% 100%;}
+#student .biao:nth-child(odd){position:relative;margin-bottom:0px;border:none;border-left: 5px solid #F08080;}
+#student .biao:nth-child(even){position:relative;margin-bottom:0px;border:none;border-left: 5px solid #eb6652;}
+#student .biao:nth-child(even) .item-thumbnail-left{padding-left: 86px;border:none;background-color: #f3f3f3;}
+#student .biao:nth-child(odd) .item-thumbnail-left{padding-left: 86px;border:none;}
+#student .item-thumbnail-left img{border-radius: 50%;top:27px;left:2px;}
+#student .serch{padding: 0px 5px 10px;position: relative;}
+#student .serch input{width: 100%;border-radius: 5px;padding-left:3em;}
+#student .serch i{position: absolute;left:15px;top:2px;font-size: 18px;padding:5px 10px;}
+#student .serch input::-webkit-input-placeholder{font-size: 12px;}   
+#student .serch input:-moz-placeholder{font-size: 12px;}                 
+#student .serch input::-moz-placeholder{font-size: 12px;}                  
+#student .serch input:-ms-input-placeholder{font-size: 12px;}
+/*我的相册 */
+#my-photo #file{display:none}
+#my-photo{ background:url("../img/tabs/teacher-background.jpg") no-repeat center; background-size:100% 100%;}
+#my-photo .img{width:26%;}
+#my-photo .subject{margin-top:10px;padding-left: 5px;}
+#my-photo .banner{
+	width: 100%;
+	height: auto;
+	margin-top: 5px;
+}
+#my-photo .banner img{
+	width: 100%;
+	height: auto;
+}
+#my-photo .cont{
+	overflow: hidden;
+	padding:0px 2%;
+}
+#my-photo .cont .col-45:nth-child(odd){
+	float: left;
+	width: 49%;
+	margin:2px 1% 2px 0;
+}
+#my-photo .cont .col-45:nth-child(even){
+	float: left;
+	width: 49%;
+	margin:2px 0 2px 1%;
+}
+#my-photo .cont .col-45 img{
+	width: 100%;
+	height: auto;
+}
+#my-photo .cont .col-45.add{
+	background-color: #fff;
+}
+#my-photo .cont .col-45.add img{
+	display: block;
+	width: 50%;
+	height: 50%;
+	margin:25%;
+}
+/*学生详情*/
+#student-detail{ background:url("../img/tabs/teacher-background.jpg") no-repeat center; background-size:100% 100%;}
+#student-detail .img{width:26%;}
+#student-detail .history{float:right;line-height:36px;color:#928F8A;}
+#student-detail .subject{margin-top:10px;}
+#student-detail .cont{
+	background-color: #fff;
+	width: 90%;
+	height: auto;
+	margin:15px 5% 0;
+	padding:20px 20px 0px;
+}
+#student-detail .cont .top{
+	background-color: #fad5c3;
+	width: 90px;
+	height: 90px;
+	margin:0px auto;
+	border-radius: 50%;
+}
+#student-detail .cont .top img{
+	width: 90%;
+	height: 90%;
+	border-radius: 50%;
+	margin:5%;
+	
+}
+#student-detail .cont .name{
+	text-align: center;
+	margin:10px 0;
+}
+#student-detail .cont .infor{
+	margin: 15px 0;
+}
+#student-detail .cont .infor .jz-name{
+	padding-left: 2rem;
+	background: url(../img/tabs/jz.png) no-repeat left center;
+}
+#student-detail .cont .infor .school{
+	padding-left: 2rem;
+	background: url(../img/tabs/xx.png) no-repeat left center;	
+}
+#student-detail .cont .infor .place{
+	padding-left: 2rem;
+	background: url(../img/tabs/dz2.png) no-repeat left center;	
+}
+#student-detail .cont .infor .phone{
+	padding-left: 2rem;
+	background: url(../img/tabs/sj2.png) no-repeat left center;	
+}
+#student-detail .cont .subject:last-child{
+	padding-bottom: 10px;
+}
+#student-detail .bot{
+	width: 84%;
+	margin:0 8%;
+}
+#student-detail .bot img{
+	width: 100%;
+}
+/*我的*/
+#account{
+	background:url("../img/tabs/teacher-background.jpg") no-repeat center; background-size:100% 100%;
+}
+#account .top{
+	background-color: #F08080;
+	width: 100%;
+	height: auto;
+	padding: 10px 0;
+}
+#account .top img{
+	width: 90%;
+	height: 90%;
+	border-radius: 50%;
+	margin:5%;
+}
+#account .top .topBg{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: #fdd3c6;
+	margin:0px auto;
+}	
+#account .top p{
+	text-align: center;
+	color: #fff;
+	margin-top: 10px;
+}
+#account .bott{
+	width: 100%;
+	height: auto;
+/*	background: url("../img/my/bg.png") no-repeat;
+background-size: 100% 100;*/
+padding: 10px 0;
+overflow: hidden;
+} 
+#account .bott .col-30{
+	width: 30%;
+	height: auto;
+	background-color: #fff;
+	padding:10px;
+	margin:0 1.65% 10px;
+	float: left;
+}
+#account .bott .col-30 img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin:0 auto;
+}
+#account .bott .col-30 p{
+	text-align: center;
+	margin-top: 10px;
+}
+/*我的资料*/
+#my-profile{background:url("../img/tabs/teacher-background.jpg") no-repeat center; background-size:100% 100%;}
+#my-profile .img{width:26%;}
+#my-profile .div{padding:10px;}
+#my-profile .my-avatar{
+	background-color: #fad5c3;
+    width: 90px;
+    height: 90px;
+    margin: 0px auto;
+    border-radius: 50%;
+}
+#my-profile .my-avatar .children{
+	width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    margin: 5%;
+}
+#my-profile .profile-img{display:block;margin:0 auto;width:7%;}
+#my-profile .info-detail{position:relative;margin-bottom: 20px;}
+#my-profile .detail-div{position:absolute;font-size:14px;top:10%;right:55%;padding-left: 1.5rem;
+    background: url(../img/tabs/jz.png) no-repeat left center;background-size: 15px;}
+ #my-profile .div4{position:absolute;font-size:14px;top:16%;right:55%;padding-left: 1.5rem;
+    }
+#my-profile .div-detail{position:absolute;font-size:14px;top:10%;left:55%;padding-left: 1.5rem;
+    background: url(../img/tabs/sj2.png) no-repeat left center;background-size: 15px;}
+#my-profile .div5{position:absolute;font-size:14px;top:16%;left:55%;padding-left: 1.5rem;
+    background: url(../img/tabs/xx.png) no-repeat left center;background-size: 15px;}
+#my-profile .div6{position:absolute;font-size:14px;top:36%;right:55%;color:#FF5B46;}
+#my-profile .div7{position:absolute;font-size:14px;top:42%;right:55%;}
+#my-profile .div8{position:absolute;font-size:14px;top:44%;right:24%;color:#FF5B46;}
+#my-profile .div9{position:absolute;font-size:14px;top:48%;right:7%;}
+#my-profile .span1{position:absolute;font-size:14px;top:68%;right:55%;color:#FF5B46;}
+#my-profile .span2{position:absolute;font-size:14px;top:74%;right:55%;}
+#my-profile .span4{position:absolute;font-size:14px;top:52%;left:55%;color:#FF5B46;}
+#my-profile .span5{position:absolute;font-size:14px;top:58%;left:55%;}
+/*我的收入*/
+#my-income{background:url("../img/tabs/teacher-background.jpg") no-repeat center; background-size:100% 100%; }
+#my-income .income{padding:10px;}
+#my-income .cont{
+	margin: 10px;
+}
+#my-income .cont .cost{
+	background-color: #f4a51f;
+	border-radius:5px;
+	padding-bottom: 10px;
+
+}
+#my-income .cont .cost p{
+	text-align: center;
+	color: #fff;
+}
+#my-income .cont .cost button{
+	display: block;
+	width: 100px;
+	border: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding:2px 12px;
+	margin: 10px auto 0;
+	background-color: #f4a51f;
+	border-radius: 10px;
+	font-size: 16px;
+}
+#my-income .cont .add .bank,#my-income .cont .add .car{
+overflow: hidden;
+padding:10px 5px;
+border-bottom: 1px solid #e0e2dd;
+}
+#my-income .cont .add .car{
+	border-left: 1px solid #e0e2dd;
+	border-right: 1px solid #e0e2dd;
+}
+#my-income .cont .add .bank p,#my-income .cont .add .car p{
+	float: left;
+	margin-bottom: 0;
+}
+#my-income .cont .add .bank img{
+	width: 18px;height:18px;display: block;
+	float: right;
+}
+#my-income .cont .add .car i{
+	float: right;
+	display: block;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+#my-profile .chang{
+	margin-top: 20px;
+}
+#my-profile .chang select{
+	width: 100px!important;
+}
+#my-profile .x1,#my-profile .x2,#my-profile .x3{
+	padding-left: 1.5rem;
+    background: url(../img/tabs/jz.png) no-repeat left center;
+    background-size: 18px;
+    line-height: 36px;
+    width: 86%;
+    margin:0 7%;
+}
+#my-profile .x2{
+    background: url(../img/tabs/sj2.png) no-repeat left center;	
+}
+#my-profile .x3{
+    background: url(../img/tabs/xx.png) no-repeat left center;	
+}
+#my-profile .x4{
+    line-height: 36px;
+        width: 86%;
+    margin:0 7%;
+}
+#my-profile .x5{
+	width: 90%;
+	margin-left: 7%;
+}
+#my-profile  input{
+	display: inline;
+	width: 200px!important;
+	padding-left: 1em;
+	border-radius: 5px;
+	margin-bottom: 15px;
+
+}
+#my-profile .chang button{
+	border: none;
+	padding: 6px 20px;
+	display: block;
+	margin:10px auto;
+	color: #fff;
+	background-color: #F08080;
+	border-radius: 5px;
+}
+/*我的课程详情*/
+#my-detail{background:url("../img/tabs/teacher-background.jpg") no-repeat center; 
+	background-size:100% 100%;}
+#my-detail .tou-avatar{
+	width: 100%;
+    height: 100%;
+    border-radius: 50%;
+   
+}
+#my-detail .detail-avatar{
+	background-color: #fad5c3;
+    width: 110px;
+    height: 110px;
+    margin: 0px auto;
+    border-radius: 50%;
+    position: absolute;
+    top:40%;
+    left:36%;
+}
+#my-detail .name{position:absolute;left:20%;color:#fff;font-size:1.2rem;}
+#my-detail .subject-info{padding-left:10%;}
+#my-detail .info-li{margin-top:10px;}
+#my-detail .subject-span{
+	padding-left:20px;
+	background:url("../img/tabs/book.png") no-repeat left center;
+	background-size:14px 14px; 
+}
+#my-detail .subject-span1{
+	padding-left:20px;
+	background:url("../img/tabs/time.png") no-repeat left center;
+	background-size:14px 14px; 
+}
+#my-detail .subject-span2{
+	padding-left:20px;
+	background:url("../img/tabs/biao.png") no-repeat left center;
+	background-size:14px 14px; 
+}
+#my-detail .detail-btn{display:block;margin:20px auto;width:90%;border:none;height:36px;background:#FF5B46;color:#fff;border-radius:4px;font-size:16px}
+/*我的历史课程*/
+#history-subject{
+	background:url("../img/tabs/teacher-background.jpg") no-repeat center; 
+	background-size:100% 100%;
+}
+#history-subject .top{
+	padding:10px;
+}
+#history-subject .top img{
+	display: block;
+	width:120px;
+	height: auto;
+}
+#history-subject .date{padding-left:1rem; background:url("../img/tabs/class.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#history-subject .classtime{padding-left:1rem; background:url("../img/tabs/week.png") no-repeat left center; background-size:14px;font-size:12px;color:#656460;}
+#history-subject .english{color:#FF5B46;font-size:14px;}
+#history-subject .detail{width:34px;height:70px;position:absolute;right:2%;top:20%;z-index:1000;border:2px solid #F08080;}
+#history-subject .biao{position:relative;margin-bottom:4px;}
+#history-subject .serch{padding: 0px 5px 10px;position: relative;}
+#history-subject .serch input{width: 100%;border-radius: 5px;padding-left:3em;}
+#history-subject .serch i{position: absolute;left:15px;top:2px;font-size: 18px;padding:5px 10px;}
+#history-subject .serch input::-webkit-input-placeholder{font-size: 12px;}   
+#history-subject .serch input:-moz-placeholder{font-size: 12px;}                 
+#history-subject .serch input::-moz-placeholder{font-size: 12px;}                  
+#history-subject .serch input:-ms-input-placeholder{font-size: 12px;}
+.isCurrentDay{color: #fff;background: url("../img/tabs/rqbj.png") no-repeat center top;background-size: 22px;}
+/*历史课程详情*/
+#history-detail{
+	background:url("../img/tabs/teacher-background.jpg") no-repeat center; 
+	background-size:100% 100%;
+}
+#history-detail .top{
+	padding:10px;
+}
+#history-detail .top img{
+	display: block;
+	width:120px;
+	height: auto;
+}
+#history-detail .list{
+	margin: 0 10px;
+	border-left:2px solid #F08080;
+	height: auto;
+	position: relative;
+}
+#history-detail .list .f1{
+	width: 94%;
+	height: auto;
+	margin:0 3%;
+	background-color: #F08080;
+	border-radius: 5px;
+	overflow: hidden;
+	padding:5px 4px 5px 8px;
+	
+}
+#history-detail .list .f1 .inf{
+	float: left;
+}
+#history-detail  .f1 .inf .pho{
+	overflow: hidden;
+}
+#history-detail  .f1 .inf .pho span{
+	float: left;display: block;line-height: 50px;color: #fff;margin-left: 5px
+}
+#history-detail  .f1 .inf img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	float: left;
+	display: block;
+	border:3px solid #feaf95;
+}
+#history-detail  .f1 .inf p{
+	margin-top:5px;
+	color:#fff;
+	font-size: 13px;
+}
+#history-detail  .f1 .inf p span{
+	margin-left: 5px;
+}
+#history-detail  .f1 .time{
+	float: right;
+}
+#history-detail  .f1 .time p{
+	color: #eb6652;
+}
+#history-detail  .qq{
+	position: absolute;
+    left:-7px;
+    top:0;
+	width: 12px;height: 12px;
+	border-radius: 50%;
+	border:2px solid #F08080;
+	background-color: #fff;
+}
+#history-detail  .qq1{
+    left:-7px;
+    top:110px;
+}
+#history-detail  .qq2{
+    left:-7px;
+    top:280px;
+}
+#history-detail .list .f2{
+	width: 94%;
+	height: auto;
+	margin:15px 3% 0;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#history-detail  .f2 .tit,#history-detail  .f3 .tit{
+	background-color: #c2cf84;
+	border-radius: 5px;
+	overflow: hidden;
+	padding:0 10px;
+}
+#history-detail  .f2 .tit h4,#history-detail  .f3 .tit h4{
+	color: #fff;
+	float: left;
+	font-size: 14px;
+}
+#history-detail  .f2 .tit img,#history-detail  .f3 .tit img{
+	display: block;
+	float:right; 
+	margin-top: 8px;
+}
+#history-detail  .f2 .zhidao{
+	padding:10px;
+}
+#history-detail  .f2 .zhidao .cont{
+	width: 100%;
+	height: 100px;
+	text-indent: 1em;
+	overflow-y: scroll;
+}
+#history-detail .list .f3{
+	width: 94%;
+	height: auto;
+	margin:15px 3% 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#history-detail  .f3 .tit{
+	background-color: #f4a51f;
+}
+#history-detail  .f3 .tit img{
+	width:20px;
+	height: 20px; 
+}
+#history-detail  .f3 .add-cont{
+	padding:10px;
+	overflow:hidden;
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+#history-detail  .f3 .add-cont p{
+	float: left;
+	margin-bottom: 0px;
+	color: #939393;
+}
+#history-detail  .f3 .add-cont i{
+	float: right;
+	font-size: 18px;
+}
+/*课后指导模态,添加银行卡模态，提现模态*/
+#history-detail-modal,#withdraw-deposit-modal{width: 100%; height: auto; display: block; background: rgba(0,0,0,0.5);}
+#history-detail-modal .box,#add-bank-modal .box,#withdraw-deposit-modal .box{
+	width: 240px;height:200px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin:160px auto 0; 
+}
+#history-detail-modal .box p,#add-bank-modal .box p,#withdraw-deposit-modal .box p{
+padding: 8px 1em;border-bottom:1px solid #eee;
+}
+#history-detail-modal .box textarea{
+	width: 100%;
+	padding:6px 10px;
+	resize: none;
+	height: 120px;
+	border-bottom:1px solid #eee;
+}
+#history-detail-modal .box .bt,#add-bank-modal .box .bt,#withdraw-deposit-modal .box .bt{
+	overflow:hidden;
+}
+#add-bank-modal .box .bt,#withdraw-deposit-modal .box .bt{
+	border-top:1px solid #eee;
+	margin-top: 20px;
+}
+#history-detail-modal .box .bt button,#add-bank-modal .box .bt button,#withdraw-deposit-modal .box .bt button{
+	border: none;
+	background-color: #fff;
+	width: 50%;
+	padding:6px 0;
+}
+#history-detail-modal .box .bt .btn1,#add-bank-modal .box .bt .btn1,#withdraw-deposit-modal .box .bt .btn1{
+float: left;
+border-right:1px solid #eee;
+}
+#history-detail-modal .box .bt .btn2,#add-bank-modal .box .bt .btn2,#withdraw-deposit-modal .box .bt .btn2{
+	float: right;
+}
+
+#add-bank-modal .box .bank,#add-bank-modal .box .num,#withdraw-deposit-modal .box .num,#withdraw-deposit-modal .box .bank{
+	padding: 10px 5px;
+}
+#add-bank-modal .box .num input,#add-bank-modal .box .bank select,#withdraw-deposit-modal .box .num input,#withdraw-deposit-modal .box .bank select{
+	border:1px solid #f4a51f;
+	height: 25px;
+}
+#add-bank-modal .box .num input,#withdraw-deposit-modal .box .num input{
+	padding-left: 1em;
+}
+
+/*我的上课时间*/
+#my-classtime{
+	background:url("../img/tabs/teacher-background.jpg") no-repeat center; 
+	background-size:100% 100%;
+}
+#my-classtime .income{padding:10px;overflow:hidden;border-bottom: 1px solid #e0e2dd;}
+#my-classtime .income .tit{
+	display: block;
+	float: left;
+	width:36%
+}
+#my-classtime .income .add{
+	float: right;
+	width:20px;
+	height: 20px;
+	display: block;
+}
+#my-classtime .time{
+	overflow:hidden;
+	padding:10px;
+	border-left:1px solid #e0e2dd;
+	border-right:1px solid #e0e2dd;
+	border-bottom:1px solid #e0e2dd;
+}
+#my-classtime .time p{
+	float: left;
+	margin-bottom: 0px;
+}
+#my-classtime .time i{
+	display: block;
+	float: right;
+	font-size: 18px;
+}
+/*我的上课时间模态*/
+#add-bank-modal .week{
+	padding:16px;
+	color:#fff;
+}
+#add-bank-modal{
+	width: 100%; height:auto; display: block; background: rgba(0,0,0,0.5);
+}
+#add-bank-modal .save{
+	float:right;
+	color:#000;
+	background:#fff;
+	width:20%;
+	text-align: center;
+	border-radius: 6px;
+
+}
+#add-bank-modal .row .select{
+	width:100%;
+}
+#add-bank-modal .settime{
+	color:#fff;
+}
+#add-bank-modal .time-div{
+	padding:10px;
+}
+#add-bank-modal .timeStart,#add-bank-modal .timeEnd{
+	display: inline-block;
+    height: 170px;
+    width: 100%;
+	background: #fff;
+}
+#add-bank-modal .timeStart ul li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+	font-size:20px;
+}
+#add-bank-modal .timeStart .selected{
+    color: #F08080;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#add-bank-modal .timeEnd ul li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+	font-size:20px;
+}
+#add-bank-modal .timeEnd .selected{
+    color: #F08080;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/*我的可教年级*/
+#my-grade{
+	background:url("../img/tabs/teacher-background.jpg") no-repeat center; 
+	background-size:100% 100%;
+}
+#my-grade .income{padding:10px;overflow:hidden;}
+#my-grade .income .tit{
+	display: block;
+	float: left;
+	width:36%
+}
+#my-grade .income .add{
+	float: right;
+	width:20px;
+	height: 20px;
+	display: block;
+}
+#my-grade .grad{
+	margin:10px;
+	border-radius: 5px;background-color: #c2cf84;
+	padding:10px;
+	overflow:hidden;
+}
+#my-grade .grad img{
+	display: block;
+	float: left;
+	border-radius: 50%;
+	width: 26px;
+	height: 26px;
+	border:2px solid #fff;
+}
+#my-grade .grad span{
+	display: block;
+	float: left;
+	line-height: 26px;
+	color: #fff;
+	margin-left: 40px;
+}
+#my-grade .grad i{
+	display: block;
+	float: right;
+	font-size: 18px;
+	line-height: 26px;
+	color: #F08080;
+}
+/*我的课程详情选择时间模态*/
+#my-detail-modal .week{
+	padding:16px;
+	color:#fff;
+}
+#my-detail-modal{
+	width: 100%; height:auto; display: block; background: rgba(0,0,0,0.8);
+}
+#my-detail-modal .save{
+	float:right;
+	color:#000;
+	background:#fff;
+	width:20%;
+	text-align: center;
+	border-radius: 6px;
+}
+#my-detail-modal .row .select{
+	width:100%;
+}
+#my-detail-modal .settime{
+	color:#fff;
+}
+#my-detail-modal .time-div{
+	padding:10px;
+}
+#my-detail-modal .time-choose{
+	border-radius: 10px;
+}
+#my-detail-modal .div-time{
+	margin-top:30px;
+}
+#my-detail-modal .col{border:none}

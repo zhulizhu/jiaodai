@@ -1,0 +1,95 @@
+<ion-view view-title="我的">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+  <h1 class="title" style="color:#fff;">我的</h1>
+ </ion-header-bar>
+  <ion-content id="our">
+    <!-- 我的顶部背景图-->
+    <div class="our-box">
+    	<img src="img/account/our.jpg" style="width:100%">
+    	<div class="account-avatar" >
+    	  <img  ng-src="{{infors.avatar}}" style="width:100%;border-radius: 50%;">
+    	</div>
+    	<span class="u-name"  ng-bind="infors.username">李晓杰</span>
+    </div>
+    <!-- 我关注的老师 -->
+    <div class="teacher-home" ng-show="status==1">
+      	<span class="care">我关注的老师</span>
+      	<span  class="more-choose" ng-click="openModal()" ui-sref="contact-teacher">查看全部</span>
+    </div>
+    <div class="padding" style="border-top:1px solid #ddd" ng-show="status==1">
+    <div style="border:1px solid #ddd;margin-top:20px">
+      	<div class="list" style="position: relative;">
+   		<span class="item item-avatar" style="border:none;margin:0" ui-sref="teacher-detail({id: list.id})">
+   			<img style="border-radius: 50%;" ng-src="{{list.avatar}}" ng-click="selectImg()" id="myImage">
+        <input type="file" id="file" style="display:none">
+   			<h2><i ng-bind="list.name">李晓杰</i><i style="float:right;font-size:14px;color:#eb6761">￥<span ng-bind="list.cost">90</span><i style="color:#666">/小时</i></i></h2>
+   			<p style="padding-top:6px">
+          <span ng-bind="list.autograph">和学生沟通是我的爱好!</span>
+         
+        </p>
+       
+   		</span>
+       <div style="position: absolute;top:41px;right:12px;z-index: 9999">
+           <span  ng-class="list.default==1?'focus':'unfocus'" ng-click="select({id:list.id})"></span>
+        </div>
+   		<div class="project" style="background-color: #fff;">
+   			<span ng-repeat="sub in list.subjects" ng-bind="sub.name">物理</span>
+   		</div>
+   		<div class="big-teacher" style="background-color: #fff;">
+   			<span style="background:#eb6761" ng-repeat="tes in list.tese" ng-bind="tes.name">沟通能力</span>
+   		</div>
+      <div class="row comment" style="background-color: #fff;">
+        <span class="col left">历史授课&nbsp;&nbsp;<i style="font-size:18px;color:#FFB400" ng-bind="list.history">25</i></span>
+        <span class="col right">综合评分&nbsp;&nbsp;<i style="font-size:18px;color:#FFB400" ng-bind="list.score">9.5</i></span>
+      </div>
+   		</div>
+    </div>
+    </div>
+
+	  <!-- 我的课程 -->
+    <div style="margin-top:10px;padding-bottom:10px">
+    	<span class="my-class">我的课程</span>
+    	<span class="history" ui-sref="subject-list">查看历史课程</span>
+    </div>
+    <!-- 课程具体时间 -->
+    <div class="j-time">
+    	<div>
+    		<div class="name">
+        <div ng-repeat="time in clas">
+    			<div class="date"><span ng-bind="time.day">2017年2月12日</span>&nbsp;&nbsp;<span ng-bind="time.week">星期四</span>&nbsp;&nbsp;<span ng-bind="time.tName">星期四</span>&nbsp;&nbsp;<span ng-bind="time.tPhone" data-tap-disabled="true" style="-webkit-user-select: auto !important;">星期四</span></div>
+    			<div class="avatar" >
+    				<span class="time" ng-bind="time.time">AM 8:00-8:45</span>
+    				<span class="language" ng-bind="time.name">英语</span>
+    				<div class="time-avatar">
+    					<img ng-src="{{time.avatar}}" style="width:100%;height:100%;border-radius: 50%;">
+    				</div>
+    			</div>
+          </div>
+    		</div>
+    	</div>
+    </div>
+    <!-- 我的考试 -->
+    <!-- <div style="margin-top:10px">
+    	<span class="my-class">我的考试</span>
+    </div>
+    <div class="row">
+    	<div class="col myfocus">
+    		<div style="text-align:right">已达成奖励</div>
+    		<div style="text-align:right">奖金&nbsp;&nbsp;:&nbsp;&nbsp;200</div>
+    	</div>
+    	<div class="col" style="position:relative;">
+    		<div class="focus-img">
+    			<img src="img/teacher/avatar1.png" style="width:100%">
+    		</div>
+    		<div class="focus-img-brother">英语</div>
+    		<div>目标:&nbsp;&nbsp;80分</div>
+    	</div>
+    	<div class="col">
+    		<div>2017年3月2日</div>
+    		<div>达成:90分</div>
+    	</div>
+    </div> -->
+	  <p ng-show="stat==0" style="text-align: center;margin: 60px 0;">没有正在进行的我的课程！</p>
+
+  </ion-content>
+</ion-view>

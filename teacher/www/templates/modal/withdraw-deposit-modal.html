@@ -1,0 +1,15 @@
+
+<ion-modal-view id="withdraw-deposit-modal">
+<div class="box">
+<p>提现金额</p>
+
+<div class="num"><span>提现金额：</span><input style="width: 28%;display: inline;" type="number" name="" ng-model="mon.money"><span>余额：¥<span ng-bind="lis.money" style="color: #f4a51f">78788</span></span></span></div>
+<div class="bank"><span>转入银行：</span><select style="width: 68%" ng-model="selec" ng-options="x.id as x.card_name for x in lis.bank"></select></div>
+<div class="bt">
+  <button class="btn1" ng-click="closeMod()">取消</button><button class="btn2" ng-click="withdrawDeposit({card_id:selec,cash:mon.money})">确定</button>
+</div>
+
+  
+</div>
+
+</ion-modal-view>

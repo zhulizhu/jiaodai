@@ -1,0 +1,970 @@
+/* Empty. Add your own CSS if you like */
+/*tabs*/
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated{color:#eb6761;}
+.tab-home{ background: url("../img/tabs/diagnosis.png") no-repeat center; background-size: 25px;color: #a6a6a6;}
+.tab-home-active{ background: url("../img/tabs/diagnosis-active.png") no-repeat  center; background-size: 25px; color: #ffbc00;}
+.tab-recharge{ background: url("../img/tabs/teacher.png") no-repeat center; background-size: 25px;}
+.tab-recharge_active{ background:  url("../img/tabs/teacher-active.png") no-repeat center; background-size: 25px;}
+.tab-package{ background: url("../img/tabs/account.png") no-repeat center;background-size: 25px;}
+.tab-package_active{ background:  url("../img/tabs/account-active.png") no-repeat  center; background-size: 25px;}
+/*.tab-my{ background: url("../img/tabs/my.png") no-repeat center; background-size: 25px;}*/
+/*.tab-my-active{ background:  url("../img/tabs/my_active.png") no-repeat center; background-size: 25px;}*/
+.tab-nav.tabs{ border-top:1px solid #009DD9;background-color: #fff;}
+/*基本css样式配置*/
+.bg_color {
+	background: #44A8FA;
+}
+
+.fs1 {
+	font-size: 1.375em !important;
+}
+
+/*22px*/
+.fs2 {
+	font-size: 1.25em !important;
+}
+
+/*20px*/
+.fs3 {
+	font-size: 1em !important;
+}
+
+/*16px*/
+.fs4 {
+	font-size: 1.125em !important;
+}
+
+/*18px*/
+.fs5 {
+	font-size: 0.875em !important;
+}
+
+/*14px*/
+.fs6 {
+	font-size: 0.75em !important;
+}
+
+/*12px*/
+
+.cl {
+	background: #ffbc00 !important;
+}
+
+.cl1 {
+	color: #454545 !important;
+}
+
+.cl2 {
+	color: #ffbc00 !important;
+}
+.bk{
+	background:#F0EFF2 !important;
+}
+/*诊断*/
+#background-diagnosis{
+	background: url('../img/teacher-background.jpg') no-repeat;
+	background-size:100% 100%;
+}
+#diagnosis .loading{
+	background: url('../img/tabs/loading.png') no-repeat;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index: 10000;
+	background-size: 100% 100%;
+}
+#diagnosis .content{margin-top:10px;padding:10px 10px;line-height:24px}
+#diagnosis .button-start{
+	width:100%;
+	height:36px;
+	font-size:14px;
+	border-radius:4px;
+	border:none;
+	background:#FF5B46;
+	margin-top:10px;
+	color:#fff;
+}
+#diagnosis .report{
+	text-align:center;
+	color:#1296DB;
+	display:block;
+	margin:0 auto;
+	margin-top:12px;
+}
+#diagnosis .avatar{
+	height:4rem;
+	background: #eb6761;
+}
+#diagnosis .avatar .head-box{
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	background: #fff;
+	margin:0 auto;
+	position:relative;
+	top:24px;
+}
+#diagnosis .avatar .head-box img{width:100%;}
+/*问题答卷*/
+#problem .title-top{
+	border-radius: 5px;
+}
+#problem .title-top h4{
+	text-align: center;
+	background-color: #eb6761;
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-bottom: 0!important;
+	line-height: 30px;
+	font-size: 16px;
+}
+#problem .weizhi{
+	text-align:center;
+	height:60px;
+	transform: rotate(45deg);
+	width: 60px;
+	line-height: 60px;
+	border-radius: 50%;
+}
+#problem .num{
+	font-size:20px;
+}
+#problem .num1{
+	position: absolute;
+	bottom: 13%;
+	font-size:20px;
+	left: 50%;
+}
+#problem .t-tab{
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	background:#fff;
+	margin:30px auto;
+	moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	-o-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position: relative;
+}
+#problem .t-tab .box{
+	padding:0px 10%;
+	/*	border-bottom:1px solid #ddd;*/
+	position:relative;
+	top:42%;
+}
+#problem .frist{
+	width:100%;
+	height:3rem;
+	line-height: 3rem;
+	text-align: center;
+	color:#fff;
+	font-size:1rem;
+	border-radius:6px 6px 0 0;
+}
+#problem .problem-content{
+	background:#fff;
+	padding:10px 10px 60px;
+	line-height:24px;
+	min-height:4rem;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#problem .choose-item{
+	margin-top:20px;
+}
+#problem .choose-item ul li{
+	text-indent:12px;
+	background:#fff;
+	margin-top:10px;
+	min-height:2.5rem;
+	line-height:2.5rem;
+	border-radius: 5px;
+}
+#problem .choose-item ul li.have-active,#problem .choose-item ul li.checked{
+	text-indent:12px;
+	background:#eb6761;
+	margin-top:10px;
+	min-height:2.5rem;
+	line-height:2.5rem;
+	color: #fff;
+}
+/*教师*/
+#teacher .home-teacher{border-bottom:1px solid #ddd;padding-bottom:10px;color:#eb6761;}
+#teacher .select{width:100%;margin-top:10px;border:1px solid #ddd;padding:6px;}
+#teacher .select option{width:100%;}
+#teacher .grade{margin-top:10px;}
+#teacher .chose-teacher{border:none;background:#eb6761;color:#fff;display:block;margin:26px auto 0px;width:90%;border-radius:6px;padding:6px 0px;}
+/*教师列表*/
+#teacher-background{
+	background: url('../img/teacher-background.jpg') no-repeat;
+	background-size:100% 100%;
+}
+#teacher-list .more-choose{float:right;font-size:12px;color:#666;margin-top:4%;}
+#teacher-list .teacher-home{ padding-bottom:10px;}
+#teacher-list .project{border-bottom:1px solid #ddd;padding:10px 0px;border-top: 1px solid #ddd}
+#teacher-list .project span{
+	border:1px solid #ddd;
+	display:inline-block;
+	margin-left:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	background: #eb6761;
+	color:#fff;
+}
+#teacher-list .project p, #teacher-list .big-teacher p{
+	text-indent: 1em;
+}
+
+#teacher-list .big-teacher span{
+	border:1px solid #ddd;
+	display:inline-block;
+	margin:0 6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	color:#fff;
+	background:#FF5B46;
+	margin-bottom: 5px;
+}
+#teacher-list .comment{
+	border-top:1px solid #ddd;
+	padding:0;
+}
+#teacher-list .comment .right{
+	border-left:1px solid #ddd;
+	text-align: center;
+}
+#teacher-list .comment .left{
+	text-align: center;
+}
+#teacher-list .big-teacher{padding:10px 0px;}
+#teacher-list .focus{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/focus.png") no-repeat center; 
+	float:left;
+	background-size:20px;
+}
+#teacher-list .unfocus{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/unfocus.png") no-repeat center; 
+	float:left;
+	background-size:20px;
+}
+
+
+/*教师详情*/
+#teacher-detail .contac{
+	position: absolute;top:100px;right:20px;width: 60px;height: 26px
+}
+#teacher-detail .focus{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/focus.png") no-repeat center; 
+	float:left;
+	background-size:20px;
+}
+#teacher-detail .unfocu{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/unfocu.png") no-repeat center; 
+	float:left;
+	background-size:20px;
+}
+#teacher-detail .info .name{
+	width:30%;
+	height:40px;
+	background: url("../img/teacher/name.png") no-repeat center; 
+	background-size:100% 100%;
+	margin:0 auto;
+}
+#teacher-detail .avatar-box{
+	width:70px;
+	height:70px;
+	border-radius: 50%;
+	margin:0 auto;
+	position:relative;
+	bottom:2.375rem;
+}
+#teacher-detail .avatar-box img{width:100%;}
+#teacher-detail .info ul li{
+	text-align:center;
+	padding-bottom:4px;
+}
+#teacher-detail .avatar-box img{width:100%;}
+#teacher-detail .info{
+	bottom:1.4rem;
+	background:#F9EED7;
+}
+#teacher-detail .subject{
+	font-size:18px;
+	border-left:2px solid #42A6F6;
+	padding-left:10px;
+	color:#656460;
+}
+#teacher-detail .study span{
+	text-align:center;
+	border:1px solid #ddd;
+	display:inline-block;
+	margin-left:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	background: #eb6761;
+	color:#fff;
+}
+#teacher-detail  #subject span{
+	text-align:center;
+	border:1px solid #ddd;
+	display:inline-block;
+	margin-left:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	background: #fff;
+	color:#666;
+}
+#teacher-detail .study{
+	padding-top:10px;
+}
+#teacher-detail .power{
+	margin-top:10px;
+	padding-top:10px;
+}
+#teacher-detail .power span{
+	text-align:center;
+	border:1px solid #ddd;
+	display:inline-block;
+	margin-left:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	color:#fff;
+	margin-bottom: 5px;
+}
+#teacher-detail .comment-avatar{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+}
+#teacher-detail .yue{
+	width:100%;
+	border:none;
+	color:#fff;
+	background:#FF5B46;
+	height:36px;
+	font-size:16px;
+	margin-top: 20px;
+}
+#list-modal{width: 100%; height: auto; display: block; background: rgba(0,0,0,0.5);}
+#list-modal .cha{
+	width:36px;
+	position:relative;
+	top:3.2rem;
+	left:84%;
+}
+#list-modal .area{
+	width:92%;
+	margin:3rem auto;
+	height:auto;
+	background:#fff;
+}
+#list-modal .area .area-box span{
+	text-align:center;
+	border:1px solid #ddd;
+	margin-left:10px;
+	width:24%;
+	display: inline-block;
+	border-radius:4px;
+}
+.color-red{
+	color:#eb6761;
+}
+#list-modal .x-area{
+	margin-top:10px;
+}
+#list-modal .condition span{
+	text-align:center;
+
+}
+#list-modal .clean{
+	float:left;
+	width:50%;
+}
+.activ{background:#eb6761;color:#fff}
+#list-modal .geo span{padding:1px 15px;border:1px solid #ddd;border-radius: 5px;display: block;
+    margin: 5px;
+    float: left;}
+#list-modal .geo{margin-top:10px;padding-left:10px;overflow:hidden;}
+#list-modal .geo span.district{
+	background: url("../img/teacher/gou.png")  no-repeat right center;
+	background-size:14px 10px;
+	border-bottom:1px solid #FF925B;
+	color:#FF925B;
+	
+}
+#list-modal .boy{
+	padding-right:30px;
+	background: url("../img/teacher/gou.png")  no-repeat right center;
+	background-size:14px 10px;
+	border-bottom:1px solid #eb6761;
+	color:#eb6761;
+}
+#list-modal .girl{
+	margin-left:30px;
+	padding-right:30px;
+	background: url("../img/teacher/gou.png")  no-repeat right center;
+	background-size:14px 10px;
+	border-bottom:1px solid #eb6761;
+	color:#eb6761;
+}
+#teacher-detail .boy{
+	padding-right:16px;
+	background: url("../img/teacher/gou.png")  no-repeat right center;
+	background-size:14px 10px;
+	border-bottom:1px solid #eb6761;
+	color:#eb6761;
+}
+#teacher-detail .girl{
+	padding-right:16px;
+	background: url("../img/teacher/gou.png")  no-repeat right center;
+	background-size:14px 10px;
+	border-bottom:1px solid #eb6761;
+	color:#eb6761;
+}
+#teacher-detail .complate{
+	width:96%;
+	display:block;
+	border:none;
+	color:#fff;
+	background:#FF5B46;
+	height:36px;
+	font-size:16px;
+	margin:0 auto;
+
+}
+/*完成预约*/
+#teacher-detail .subject-address{
+	font-size:16px;
+	color:#666;
+}
+#teacher-detail .period .col{
+	text-align: center;
+	border: 1px solid #ddd;
+	display: inline-block;
+	margin-left: 6px;
+	padding: 1px 10px;
+	border-radius: 4px;
+	position: relative;
+
+}
+#teacher-detail .period .col .fx{
+	display: block;
+	position: absolute;
+	top:-15px;
+	right:0px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #F13A47;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+.period-active{
+	background:#FF925B;color:#fff;
+}
+.sub-active{
+background:#eb6761!important;color:#fff!important;
+}
+#teacher-detail .day{
+	border-top:1px solid #ddd;
+	padding: 8px 0;
+}
+#teacher-detail .day span{
+	text-align:center;
+	border:1px solid #ddd;
+	margin-left:10px;
+	padding:4px 6px;
+	display: inline-block;
+	border-radius:4px 4px 0px 0px;
+	margin-bottom: 10px;
+}
+#teacher-detail .row .col-76{
+	max-width: 76%;
+	flex: 0 0 80%;
+}
+#teacher-detail .morning{
+	font-size:18px;
+	padding-left:10px;
+	color:#656460;
+}
+#teacher-detail .time{
+	padding-top:10px;
+}
+#teacher-detail .time span{
+	text-align:center;
+	border:1px solid #ddd;
+	margin-left:10px;
+	padding:2px 1px;
+	display: inline-block;
+	border-radius:4px 4px 0px 0px;
+}
+#teacher-detail .time span[disabled]{
+	background-color: #e4e4e4;
+}
+#teacher-detail .choose-area{
+	border:1px solid #ddd;
+	background:#EDEBE9;
+	padding:0px 10px;
+	line-height: 30px
+}
+#teacher-detail .input{
+	float:right;
+	height:20px;
+	width:60%;
+}
+/*预约完成*/
+#teacher-complete .complete{
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	margin:0 auto;
+}
+#teacher-complete .content{
+	text-align:center;
+	color:#3FA2F4;
+}
+#teacher-complete .teacher{
+	font-size:18px;
+	border-left:2px solid #42A6F6;
+	padding-left:10px;
+	color:#656460;
+}
+#teacher-complete .name{
+	position:absolute;
+	top:44%;
+	left:22%;
+	font-size:16px;
+	color:#666;
+}
+#teacher-complete .math{
+	text-align:center;
+	border:1px solid #ddd;
+	width:20%;
+	display: inline-block;
+	margin-top:10px;
+	background: #FF925B;
+	color:#fff;
+}
+#teacher-complete .back{
+	width:94%;
+	border:none;
+	color:#fff;
+	background:#FF5B46;
+	height:36px;
+	font-size:16px;
+	display: block;
+	margin:0 auto;
+}
+/*登录*/
+#login .register{
+	width:60%;
+	margin:0 auto;
+	display:block;
+	border:none;
+	background:#0076ED;
+	color:#fff;
+	border-radius:12px;
+	height:30px;
+}
+#login .login{
+	width:60%;
+	margin:16px auto;
+	display:block;
+	background:#0076ED;
+	color:#fff;
+	border-radius:12px;
+	height:30px;
+}
+/*登录界面*/
+#login-page .enters{width:80%;height:80px;background:#FFFFFF;margin:20px auto;}
+.enters-top{width:100%;height:41px;border-bottom:1px #cccccc solid;padding-left:30px;background: url("../img/login/username.png") no-repeat left center;background-size:20px;}
+.enters-top input{width:100%;height:40px;padding-left:16px;}
+.enters-bottom{width:100%;height:41px;border-bottom:1px #cccccc solid;padding-left:30px;background: url("../img/login/password.png") no-repeat left center;background-size:20px;}
+.enters-bottom input{width:100%;height:40px;padding-left:16px;}
+#login-page button{width:80%;height:40px;display: block;margin: auto;background:#0079EA;border-radius:20px;margin-top:20px;color:#ffffff;border:none;}
+#login-page p{text-align:center;margin-top:30px;font-size:12px;color:#333333;}
+#login-page p .forget{
+	border-left:1px solid #ddd;
+	color:#0079EA;
+	padding-left:14px;
+}
+#login-page p .register{
+	border-left:1px solid #ddd;
+	color:#0079EA;
+	padding-right:14px;
+}
+/*注册*/
+#register .enters{width:80%;height:80px;background:#FFFFFF;margin:40px auto 10px;height:160px;}
+#register .next{width:66%;height:40px;display: block;margin: auto;background:#0079EA;border-radius:20px;margin-top:50px;color:#ffffff;border:none;}
+#register .enter{width:100%;height:41px;border-bottom:1px #cccccc solid;padding-left:30px;background: url("../img/login/register.png") no-repeat left center;background-size:20px;position:relative;}
+.enter input{width:100%;height:40px;padding-left:16px;}
+#register .enter .code{position:absolute;right:1%;bottom:22%;border-radius:10px;background:#5DAEFD;padding:2px 6px;}
+/*手机验证登录*/
+#phone-login .enters{width:80%;height:80px;background:#FFFFFF;margin:40px auto 10px;height:80px;}
+#phone-login .enter{width:100%;height:41px;border-bottom:1px #cccccc solid;padding-left:30px;background: url("../img/login/register.png") no-repeat left center;background-size:20px;position:relative;}
+#phone-login .enter .code{position:absolute;right:1%;bottom:22%;border-radius:10px;background:#5DAEFD;padding:2px 6px;}
+#phone-login .phone-login{width:80%;height:34px;display: block;margin:auto;background:#0079EA;border-radius:20px;margin-top:50px;color:#ffffff;border:none;}
+/*我的*/
+#our .account-avatar{width:60px;height:60px;border-radius:50%;position:absolute;bottom:12%;left:4%;}
+#our .our-box{position:relative;}
+#our .u-name{position:absolute;left:12%;bottom:20%;left:24%;color:#fff;font-size:16px;}
+#our .more-choose{float:right;color:#9A9691;padding-right:10px;}
+#our .teacher-home{ padding-bottom:10px;}
+#our .project{border-bottom:1px solid #ddd;padding:10px 0px;border-top: 1px solid #ddd}
+#our .project span{
+	border:1px solid #ddd;
+	display:inline-block;
+	margin-left:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	background: #eb6761;
+	color:#fff;
+}
+#our .big-teacher span{
+	border:1px solid #ddd;
+	display:inline-block;
+	margin-left:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	color:#fff;
+	margin-bottom: 5px;
+}
+#our .comment{
+	border-top:1px solid #ddd;
+	padding:0;
+}
+#our .comment .right{
+	border-left:1px solid #ddd;
+	text-align: center;
+}
+#our .comment .left{
+	text-align: center;
+}
+#our .big-teacher{padding:10px 0px;}
+#our .focus{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/focus.png") no-repeat center; 
+	float:right;
+	background-size:20px;
+}
+#our .unfocus{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/unfocus.png") no-repeat center; 
+	float:right;
+	background-size:20px;
+}
+#our .care{border-left:2px solid #44A8FA;padding-left:10px;font-size:16px;color:#666;}
+#our .my-class{
+	border-left:2px solid #44A8FA;
+	padding-left:10px;
+	font-size:16px;
+	color:#666;
+}
+#our .history{
+	float:right;
+	padding-right:10px;
+}
+#our .j-time .name>div{
+	padding:10px;
+}
+#our .j-time .name>div span{
+	border:1px solid #ddd;
+}
+#our .j-time .name>div span.language{
+	background:#eb6761;
+	color:#fff;
+	display:inline-block;
+	width:30%;
+	text-align:center;
+	margin-left:5%;
+	padding:4px 10px;
+}
+#our .j-time .name>div span.time{
+	padding:4px 10px;
+}
+#our .j-time .time-avatar{
+	width:40px;
+	height:40px;
+	position:absolute;
+	right:12%;
+	bottom:10%;
+}
+#our .j-time .avatar{position:relative;padding:10px;}
+#our .j-time .date{font-size:14px;color:#666;border-top:1px solid #ddd;padding:10px;}
+#our .j-time .date-two{font-size:14px;color:#666;border-top:1px dashed #ddd;}
+#our .row .myfocus{
+	background: url("../img/account/myfcous.png") no-repeat left center;background-size:38px;
+}
+#our .row .focus-img{width:40px;height:40px;border-radius:50%}
+#our .row .focus-img-brother{position:absolute;bottom:50%;left:50%;}
+#our .row .myunfocus{
+	background: url("../img/account/myunfoucs.png") no-repeat left center;background-size:38px;
+}
+/*课程列表*/
+#our .end{border-left:2px solid #eb6761;padding-left:10px;font-size:16px;color:#666;}
+#our .end-subject{margin-top:20px;}
+#our .subject-list span{text-align:center;border:1px solid #eb6761;margin-left:10px;padding:5px 10px;display: block;float: left;margin-bottom: 5px}
+#our .subject-avatar{width:40px;height:40px;border-radius:50%;}
+#our .avatar-body{position:relative;padding-top:10px;padding-bottom:10px;border-bottom:1px solid #ddd;}
+#our .avatar-body .name{position:absolute;left:16%;bottom:34%;}
+#our .avatar-body .work{position:absolute;right:0px;bottom:34%;}
+.subActive{background-color: #eb6761;color:#fff}
+/*课程详情*/
+#our .homework{padding:10px;}
+#our .homework li span.btn{width:16%;text-align:center;color:#fff;float:right;background:#FFB295;}
+#our .homework li{border-top:1px solid #ddd;padding:10px 0px;}
+#our .after{padding:10px;position: relative;}
+#our {background:url('../img/teacher-background.jpg') no-repeat left center;background-size:100% 100%}
+#our .after-content{padding-left:10%;padding-right:2%;padding-top:20px;}
+#our .after-info{height:auto;background:#fff}
+#our .after-info .none{float:right;}
+#our .hk{line-height:24px}
+#our .avatar-two{position:absolute;width:40px;height:40px;left:3%;top:20%;}
+#our .enp{float:left;width:20%;border:1px solid #EA1014; border-top-right-radius:50px; border-bottom-right-radius: 50px;text-align:center;line-height:30px}
+#our .li-enp{background:#fff;padding-top:10px;padding-right:10px;padding-bottom:10px;overflow: hidden;margin-top: 10px}
+#our .evaluation-num span img{ margin-right: 5px; width:14%;}
+#our .text-area{padding:10px;}
+#our .text-area textarea{width:100%;height:150px;resize:none;text-indent: 1em;}
+#our .complete-btn{border:none;display:block;width:94%;margin:0 auto;background:#FF5B46;color:#fff;margin-bottom:100px;height:30px;}
+.our-active{background:#EA1014;color:#fff;}
+#our .eval{
+	margin:10px;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+}
+#our .eval .top{
+	overflow: hidden;
+
+}
+#our .eval .top .le{
+	float: left;
+	width: 60px;
+	height: 60px;
+}
+#our .eval .top .le img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+
+}
+#our .eval .top .lef{
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+#our .eval .top .righ{
+	float: right;
+}
+#our .eval .top .righ img{
+	width: 12px;height: auto;
+}
+/*问题报告*/
+#problem #main{height:270px;width:100%;}
+#problem #main .col{font-size: 18px;line-height: 28px;padding: 5px 0px!important;}
+#problem #main .col img{
+	display: block;
+	width: 20px;height: 20px;
+	margin:0 auto;
+}
+#problem .report{border-top:10px solid #f0eff4;}
+#problem .subject span{
+	text-align:center;
+	border:1px solid #eb6761;
+	display:inline-block;
+	margin-right:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	background: #fff;
+	color:#eb6761;
+}
+#problem .subject span:first-child{
+	text-align:center;
+	border:1px solid #eb6761;
+	display:inline-block;
+	margin-right:6px;
+	padding:1px 10px;
+	border-radius: 4px;
+	background: #eb6761;
+	color:#fff;
+}
+#problem .think{color:#fff;font-size:16px;display: block;float: left;}
+#problem .power{color:#fff;font-size:16px;display: block;float: left;}
+#problem .zy{font-size:16px;color:#666;}
+#problem .home-content span{background:#fff;color:#eb6761;display:inline-block;width:16%;text-align:center;border:1px solid #eb6761;}
+#problem .home-content span:first-child{background:#eb6761;color:#fff;display:inline-block;width:16%;text-align:center;}
+#problem .home-content{padding:0px 0 10px;border-bottom:2px solid #857d7d;}
+#problem .myteacher{width:96%;display:block;margin:0 auto 10px;height:40px;background:#FF5B46;border:none;color:#fff;border-radius:4px;font-size:16px}
+/*我关注的老师*/
+#contact-teacher{
+	background: url('../img/teacher-background.jpg') no-repeat;background-size:100% 100%;
+	padding: 5px;
+} 
+#contact-teacher .top{
+	width: 100%;
+	padding: 0px 0 10px;
+
+}
+#contact-teacher .top img{
+	display: block;
+	width: 120px;
+	height: auto;
+}
+#contact-teacher .serch{padding: 0px 0 10px;position: relative;}
+#contact-teacher .serch input{width: 100%;border-radius: 5px;padding-left:3em;}
+#contact-teacher .serch i{position: absolute;left:5px;top:2px;font-size: 18px;padding:5px 10px;}
+#contact-teacher .serch input::-webkit-input-placeholder{font-size: 12px;}   
+#contact-teacher .serch input:-moz-placeholder{font-size: 12px;}                 
+#contact-teacher .serch input::-moz-placeholder{font-size: 12px;}                  
+#contact-teacher .serch input:-ms-input-placeholder{font-size: 12px;}
+#contact-teacher .list{
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 10px;
+
+} 
+#contact-teacher .list .pic{
+	overflow: hidden;
+	margin:10px 5px;
+}
+#contact-teacher .pic .im{
+	float: left;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: #ffddcc;
+}
+#contact-teacher .pic .im img{
+	display: block;
+	width: 90%;
+	height: 90%;
+	border-radius: 50%;
+	margin:5%;
+}
+#contact-teacher .pic .infor{
+	float: left;
+	margin-left: 5px;
+	width: 50%;
+}
+#contact-teacher .pic .infor h4{
+	margin-top: 5px;
+}
+#contact-teacher .pic .mon{
+	float: right;
+	
+}
+#contact-teacher .pic .mon .cont{
+	overflow: hidden;
+	margin-left: 25px;
+}
+#contact-teacher .focus{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/focus.png") no-repeat center; 
+	float:left;
+	background-size:20px;
+}
+#contact-teacher .unfocus{
+	width:30px;
+	height:26px;
+	background: url("../img/teacher/unfocus.png") no-repeat center; 
+	float:left;
+	background-size:20px;
+}
+#contact-teacher .cla,#contact-teacher .energ,#contact-teacher .his{
+	margin: 0 15px;
+	border-top:1px dotted #e4e4e4;
+	overflow: hidden;
+}
+#contact-teacher .cla .col,#contact-teacher .energ .col{
+	float: left;
+	background-color: #5d9ced;
+	color: #fff;
+	border-radius: 5px;
+	padding:1px 8px;
+	width: 20%;
+	text-align: center;
+	margin:10px 5px 10px 0;
+
+}
+#contact-teacher .energ .col{
+	background-color: #ffa920;
+	width: 45%;
+	padding:4px 8px;
+}
+
+#contact-teacher .his .col{
+	width: 48%;
+	float: left;
+	padding: 10px;
+	text-align: center;
+
+}
+#contact-teacher .his .col:first-child{
+	border-right: 1px solid #e3e3e3;
+}
+#contact-teacher .his .col span{
+	color: #ffa920;
+	font-size: 18px;
+}
+
+
+/*点击放大图片模态*/
+#teacher-detail-modal{width: 100%; height: auto; display: block; background: rgba(0,0,0,0.5);}
+/* 图片放大的代码 */
+#teacher-detail-modal .imgview-mask{
+	position: fixed;
+	min-height: 100vh;
+	width: 100%;
+	background: #000;
+	opacity: .75;
+	filter: alpha(opacity=75);
+	display: none;
+}
+#teacher-detail-modal .show-img{
+	position: fixed;
+	width: 90%;
+	height: auto;
+	top: 10%;
+	margin: 5%;
+	z-index: 999999;
+	display: none;
+}
+#teacher-detail-modal .show-img img{
+	width: 100%;
+	height: auto;
+}
+#teacher-detail-modal .show-img a{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: -10px;
+	top: -10%;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+}
+#teacher-detail-modal .show-img a:hover{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: -10px;
+	top: -10%;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+}
+

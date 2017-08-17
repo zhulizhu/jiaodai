@@ -1,0 +1,58 @@
+<ion-view view-title="历史课程">
+	<ion-header-bar align-title="center" style="background:#F08080;">
+		<yike-back style="color:#fff;"></yike-back>
+		<h1 class="title" style="color:#fff;">历史课程</h1>
+	</ion-header-bar>
+	<ion-content id="history-subject">
+		<div class="top">
+			<span style="color: #F08080;display: block;margin: 10px;font-size: 18px;">我的历史课程</span>
+		</div>
+		<!-- 日历 -->
+		<div style="width: 90%;margin: 2% 5%;padding: 10px;border-radius: 5px">
+			<table class="text-center calendar" style="width: 100%;height: 200px">
+				<thead>
+					<tr class="head" style="border-bottom:2px solid #abc7e6;">
+						<th class="text-center">S</th>
+						<th class="text-center">M</th>
+						<th class="text-center">T</th>
+						<th class="text-center">W</th>
+						<th class="text-center">T</th>
+						<th class="text-center">F</th>
+						<th class="text-center">S</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tbody" ng-repeat="week in timeControl.weeks track by $index">
+						<td ng-repeat="day in week track by $index"
+						ng-class="{'isCurrentDay':isCheckDay(day)}"
+						ng-click="setDay(day)">
+						{{day|date:'dd'}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<div class="serch">
+		<i class="ion-ios-search" ng-click="searchSubject({cont:serch.name})"></i><input type="text" name="" placeholder="您可以通过学科、学员姓名搜索历史课程" ng-model="serch.name">
+	</div>
+	<div class="list biao" ng-repeat="item in subjects">
+		<div class="item item-thumbnail-left">
+			<img ng-src="{{item.avatar}}">
+			<h2><span ng-bind="item.studentName">李晓杰  </span><span class="english">(<span ng-bind="item.cateName">英语</span>)</span></h2>
+			<div style="margin-top:4px">
+				<span class="date">日期: <span ng-bind="item.day">&nbsp;&nbsp;</span><span ng-bind="item.week">星期五</span></span>
+			</div>
+			<div style="margin-top:4px">
+				<span class="classtime">上课时间: <span ng-bind="item.time"></span>
+			</div>
+		</div>
+		<div class="detail">
+			<div style="font-size:14px;color:#F08080;padding-top:12px" ui-sref="history-detail({id:item.cid})">查看详情</div>
+		</div>
+	</div>
+	<p ng-show="stat==0" style="text-align: center;margin: 60px 0;">没有历史课程列表！</p>
+
+</ion-content>
+</ion-view>

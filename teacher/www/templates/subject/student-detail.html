@@ -1,0 +1,43 @@
+<ion-view view-title="学生详情">
+ <ion-header-bar align-title="center" style="background:#F08080;">
+    <yike-back style="color:#fff;"></yike-back>
+    <h1 class="title" style="color:#fff;">学生详情</h1>
+  </ion-header-bar>
+  <ion-content id="student-detail">
+     <div style="padding:5px">
+      <!-- 我的课程标签 -->
+      <div class="subject">
+        <span>
+          <span style="color: #F08080;display: block;margin: 10px;font-size: 18px;">学生详情</span>
+        </span>
+      </div>
+    </div>
+    <div class="cont" >
+      <div class="top">
+        <img ng-src="{{detail.avatar}}">
+      </div>
+      <p class="name"><span ng-bind="detail.name"></span><span style="color: #F08080;font-weight: 13px;">（<span ng-bind="detail.class_name">初三年级</span>）</span></p>
+
+      <div class="infor">
+        <p class="jz-name">家长姓名：<span ng-bind="detail.parent_name">张晓明</span></p>
+        <p class="school">学校：<span ng-bind="detail.school">天津市第209中学</span></p>
+        <p class="place">上课地址：<span ng-bind="detail.teach_address">天津市和平锦州道109号</span></p>
+        <p class="phone">家长联系电话：<span ng-bind="detail.parent_phone">11225254544</span></p>
+        <p style="padding-left: 2rem;">本人联系电话：<span ng-bind="detail.phone">11225254544</span></p>
+      </div>
+      <div class="problem">
+        <h4>学科问题</h4>
+        <div class="subject" ng-repeat="sub in subject">
+          <span ng-bind="sub.name">物理</span>：<span ng-repeat="jn in sub.attr track by $index" style="background-color: #7bc9d8;color: #fff;margin-right: 10px;">{{jn}}</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="bot">
+      <img src="img/tabs/db2.png">
+    </div>
+  	
+   	 	
+  </ion-content>
+</ion-view>
+

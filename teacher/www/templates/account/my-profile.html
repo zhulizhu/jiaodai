@@ -1,0 +1,28 @@
+<ion-view view-title="我的资料">
+ <ion-header-bar align-title="center" style="background:#F08080;">
+  <yike-back style="color:#fff;"></yike-back>
+  <h1 class="title" style="color:#fff;">我的资料</h1>
+ </ion-header-bar>
+  <ion-content id="my-profile">
+  	<div class="div">
+		<span style="color: #F08080;display: block;margin: 10px;font-size: 18px;">我的资料</span>
+  	</div>
+  	<div class="my-avatar">
+  		<img ng-src="{{details.avatar}}" class="children">
+  	</div>
+  	<div class="info-detail" >
+  		<img src="img/tabs/profile.png" class="profile-img" ui-sref="compile">
+  			<span class="detail-div" ng-bind="details.name">李晓杰</span>
+        <span class="div4">性别：<span ng-bind="details.sex">男</span></span>
+  			<span class="div-detail" ng-bind="details.phone">18215513387</span>
+  			<!-- <span class="div2" >186.qq.com</span> -->
+  			<span class="div5" ng-bind="details.address">天津市和平区</span>
+  			<span class="div6" >就读院校</span>
+  			<span class="div7" ng-bind="details.school">毕业于天津教育专业</span>
+  			<span class="span1">课时费</span>
+  			<span class="span2"><span ng-bind="details.cost">90</span>元/时</span>
+  			<span class="span4">个性签名</span>
+  			<p class="span5" ng-bind="details.autograph">和学生沟通是我最大的爱好</p>
+  	</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view view-title="我关注的老师">
+  <ion-header-bar align-title="center" style="background:#eb6761;">
+    <yike-back style="color:#fff;"></yike-back>
+    <h1 class="title" style="color:#fff;">我关注的老师</h1>
+  </ion-header-bar>
+  <ion-content id="contact-teacher">
+   <div class="top">
+       <span  style="display:block;color: #eb6761;margin:0 10px;padding:10px 0;font-size: 18px;">我关注的老师</span>
+   </div>
+   <div class="serch">
+     <i class="ion-ios-search" ng-click="searchTeacher(user)"></i><input ng-model="user.name" type="text" name="" placeholder="您可以通过老师姓名搜索您关注的老师">
+   </div>
+   <div class="list" ng-repeat="list in lists">
+     <div class="pic">
+      <div class="im">
+        <img ng-src="{{list.avatar}}">
+      </div>
+      <div class="infor">
+        <h4 ng-bind="list.name">李晓梅</h4>
+        <p ng-bind="list.autograph">教学永远是我的乐趣</p>
+      </div>
+      <div class="mon">
+        <p><span style="color: #eb6761;font-size: 18px;">¥<span ng-bind="list.cost">90</span></span>/小时</p>
+        <div class="cont">
+           <span class="focus"  ></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="cla">
+      <div class="col" ng-repeat="subj in list.subjects" ng-bind="subj.name">语文</div> 
+    </div>
+    <div class="energ">
+      <div class="col" ng-repeat="ts in list.tese" ng-bind="ts.name">语文</div> 
+    </div>
+    <div class="his">
+      <div class="col">历史授课&nbsp;&nbsp;<span ng-bind="list.history">25</span></div>
+      <div class="col">综合评分&nbsp;&nbsp;<span ng-bind="list.score">1</span></div>
+    </div>
+  </div>
+
+      <p ng-show="stat==0" style="text-align: center;margin: 60px 0;">没有我关注的老师！</p>
+
+</ion-content>
+</ion-view>
